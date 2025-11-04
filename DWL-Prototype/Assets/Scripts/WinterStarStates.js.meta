@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/93be40cc-c072-4ea1-a040-72b8979f32f7>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 54b2aa22-14a3-4ab4-8e39-aa64ad9c0864
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 54b2aa22-14a3-4ab4-8e39-aa64ad9c0864
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> dea0deba-1691-45e9-b200-a77d637ae10d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/dea0deba-1691-45e9-b200-a77d637ae10d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 10816276-31fd-48f9-b680-dbd7b6532990
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    christmasTree: false
+    debugMode: false
+    fragment1: false
+    fragment2: false
+    fragment3: false
+    iceSculpture1: false
+    iceSculpture2: false
+    iceSculpture3: false
+    starObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - starObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      iceSculpture1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      iceSculpture2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      iceSculpture3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      christmasTree: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      debugMode: true
+  ScriptTypes:
+    -
+      {}
