@@ -1,0 +1,181 @@
+- !<AssetImportMetadata/c928d8d3-6b5a-48d4-9f6c-ea681ccdc2a5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0549dea8-2245-4bbb-86ad-d3283bf38510
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0549dea8-2245-4bbb-86ad-d3283bf38510
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3c756014-a785-4699-97cc-de1cf53736e3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3c756014-a785-4699-97cc-de1cf53736e3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0b3a803b-c39a-40c0-94c4-126a145bba11
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    christmasTree: false
+    collectDuration: false
+    collectedSound: false
+    descentDistance: false
+    descentDuration: false
+    descentEndScale: false
+    descentStartScale: false
+    explosionDistance: false
+    explosionDuration: false
+    explosionSound: false
+    failsafeTimeout: false
+    fragment1: false
+    fragment2: false
+    fragment3: false
+    haloComplete: false
+    haloCompleteMaterial: false
+    haloFadeDuration: false
+    haloRotationDuration: false
+    instructionText: false
+    landscapeElements: false
+    landscapeScaleInDelayMax: false
+    landscapeScaleInDelayMin: false
+    landscapeScaleInDuration: false
+    ornamentScaleInDelayMax: false
+    ornamentScaleInDelayMin: false
+    ornamentScaleInDuration: false
+    ornaments: false
+    soundtrackAudio: false
+    starBorder: false
+    starBorderMaterial: false
+    starParticlesLeft: false
+    starParticlesRight: false
+    treeAnimationDuration: false
+    uiFadeInDuration: false
+    uiFadeOutDuration: false
+    uiMessageDuration: false
+    unificationRiseDistance: false
+    unificationRiseDuration: false
+    unificationSound: false
+    windAnimation: false
+    windFadeInDuration: false
+    windFadeOutDuration: false
+    windSound: false
+    windVisibleDuration: false
+    winterStarContainer: false
+    winterStarHolder: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - winterStarContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      winterStarHolder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fragment3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      christmasTree: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ornaments: !<reference.SceneObject[]>
+        []
+      haloComplete: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      haloCompleteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      starBorder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      starBorderMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      windAnimation: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      starParticlesLeft: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      starParticlesRight: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      landscapeElements: !<reference.SceneObject[]>
+        []
+      instructionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      soundtrackAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      windSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      explosionSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      collectedSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      unificationSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      descentDistance: 0.300000
+      descentDuration: !<float> 5.000000
+      descentStartScale: !<float> 0.000000
+      descentEndScale: 0.050000
+      explosionDistance: 0.500000
+      explosionDuration: !<float> 1.000000
+      collectDuration: 0.800000
+      windFadeInDuration: !<float> 1.000000
+      windVisibleDuration: !<float> 5.000000
+      windFadeOutDuration: !<float> 1.000000
+      haloRotationDuration: !<float> 10.000000
+      haloFadeDuration: !<float> 1.000000
+      unificationRiseDistance: 0.600000
+      unificationRiseDuration: !<float> 3.000000
+      treeAnimationDuration: !<float> 3.000000
+      ornamentScaleInDuration: 0.500000
+      ornamentScaleInDelayMin: !<float> 0.000000
+      ornamentScaleInDelayMax: !<float> 3.000000
+      landscapeScaleInDuration: !<float> 2.000000
+      landscapeScaleInDelayMin: !<float> 0.000000
+      landscapeScaleInDelayMax: !<float> 2.000000
+      uiMessageDuration: !<float> 5.000000
+      uiFadeInDuration: 0.500000
+      uiFadeOutDuration: 0.500000
+      failsafeTimeout: !<float> 120.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject winterStarContainer
+    - // @input SceneObject winterStarHolder
+    - // @input SceneObject fragment1
+    - // @input SceneObject fragment2
+    - // @input SceneObject fragment3
+    - // @input SceneObject christmasTree
+    - "// @input SceneObject[] ornaments = {}"
+    - // @input SceneObject haloComplete
+    - // @input Asset.Material haloCompleteMaterial
+    - // @input SceneObject starBorder
+    - // @input Asset.Material starBorderMaterial
+    - // @input SceneObject windAnimation
+    - // @input SceneObject starParticlesLeft
+    - // @input SceneObject starParticlesRight
+    - "// @input SceneObject[] landscapeElements = {}"
+    - // @input Component.Text instructionText
+    - // @input Component.AudioComponent soundtrackAudio
+    - // @input Component.AudioComponent windSound
+    - // @input Component.AudioComponent explosionSound
+    - // @input Component.AudioComponent collectedSound
+    - // @input Component.AudioComponent unificationSound
+    - // @input float descentDistance = 0.3
+    - // @input float descentDuration = 5
+    - // @input float descentStartScale
+    - // @input float descentEndScale = 0.05
+    - // @input float explosionDistance = 0.5
+    - // @input float explosionDuration = 1
+    - // @input float collectDuration = 0.8
+    - // @input float windFadeInDuration = 1
+    - // @input float windVisibleDuration = 5
+    - // @input float windFadeOutDuration = 1
+    - // @input float haloRotationDuration = 10
+    - // @input float haloFadeDuration = 1
+    - // @input float unificationRiseDistance = 0.6
+    - // @input float unificationRiseDuration = 3
+    - // @input float treeAnimationDuration = 3
+    - // @input float ornamentScaleInDuration = 0.5
+    - // @input float ornamentScaleInDelayMin
+    - // @input float ornamentScaleInDelayMax = 3
+    - // @input float landscapeScaleInDuration = 2
+    - // @input float landscapeScaleInDelayMin
+    - // @input float landscapeScaleInDelayMax = 2
+    - // @input float uiMessageDuration = 5
+    - // @input float uiFadeInDuration = 0.5
+    - // @input float uiFadeOutDuration = 0.5
+    - // @input float failsafeTimeout = 120

@@ -1,0 +1,82 @@
+- !<ObjectPrefab/fbc30fa1-1857-4e34-abd3-225ba5ba84d8>
+  PackagePath: ""
+  objects:
+    - !<own> 2f10d794-d105-481a-ad67-993d3d9a43df
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/18883ec2-65d9-4689-8b62-96bbebd108b7>
+  PrefabRemaps:
+    []
+  Name: Leaf Particles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -84.330444, y: -3.084689, z: -92.671486}
+    Scale: {x: 0.800000, y: 0.800000, z: 0.800000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1cedcf13-cb80-4fea-b770-4f8dffcbe85c
+- !<VFXComponent/1cedcf13-cb80-4fea-b770-4f8dffcbe85c>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> 3e6b9da5-f625-4f54-aa90-1e7525478fd6
+- !<SceneObject/2f10d794-d105-481a-ad67-993d3d9a43df>
+  PrefabRemaps:
+    - 18883ec2-65d9-4689-8b62-96bbebd108b7: 18883ec2-65d9-4689-749d-6944142ef748
+    - 1cedcf13-cb80-4fea-b770-4f8dffcbe85c: 1cedcf13-cb80-4fea-488f-b072003417a3
+    - 2f10d794-d105-481a-ad67-993d3d9a43df: 2f10d794-d105-481a-5298-66c2c265bc20
+    - 40cb6579-c2b7-4cf4-a889-cf0446a0f45b: 40cb6579-c2b7-4cf4-5776-30fbb95f0ba4
+    - adcc0e95-4211-4ca4-8933-8605edab0bf0: adcc0e95-4211-4ca4-76cc-79fa1254f40f
+  Name: Plant Particles Left
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.000001, y: -0.000012, z: 0.000003}
+    Rotation: {x: 91.647018, y: 84.245613, z: -88.770035}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> adcc0e95-4211-4ca4-8933-8605edab0bf0
+    - !<own> 18883ec2-65d9-4689-8b62-96bbebd108b7
+  Components:
+    []
+- !<VFXComponent/40cb6579-c2b7-4cf4-a889-cf0446a0f45b>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> a5513cf0-7ceb-4872-87e6-8656829edb59
+- !<SceneObject/adcc0e95-4211-4ca4-8933-8605edab0bf0>
+  PrefabRemaps:
+    []
+  Name: Flower Particles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -84.330444, y: -3.084689, z: -92.671486}
+    Scale: {x: 0.800000, y: 0.800000, z: 0.800000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 40cb6579-c2b7-4cf4-a889-cf0446a0f45b

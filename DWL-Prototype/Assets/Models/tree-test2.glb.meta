@@ -1,0 +1,519 @@
+- !<AssetImportMetadata/0725d9bb-bd93-4f72-8c2b-f76210400031>
+  ImportedAssetIds:
+    2bc3efd0c01c3c36: !<reference> 6a73f54e-5bda-4814-9757-da5f632a7669
+    2f0eaf32f915115b: !<reference> 43af7247-3bc8-4841-b57a-70329e314740
+    35f671dd95a37b1b: !<reference> cb79f2e2-42a1-4e4a-b837-f9b616f11ae5
+    4a3e924fad0e2f27: !<reference> 4fc01166-9fa4-4c09-9ecc-2dcba326810c
+    542bb851d4559fbd: !<reference> a7848ad6-0d4d-4aa8-af5b-46d56482dd52
+    601f77956048d19d: !<reference> af27ad7b-1f22-43d2-9518-8a6841c0ca76
+    66780cf3a4dcb2b8: !<reference> 5b13ae29-e386-4fb7-bb06-7191e9248981
+    7121a945a9a8aef4: !<reference> 78188ba8-69dd-4c61-8d83-152188cf0f26
+    96f664b015fcd573: !<reference> ee2cc3ed-fbae-4b6b-8a09-3d3d57cbb562
+    Animations/tree.000Action: !<reference> 5468bf36-c096-4360-88f5-866635419dab
+    Animations/tree.001Action: !<reference> 80159435-f7f4-467f-a77a-304a7cfdc57d
+    Animations/tree.002Action: !<reference> 94f7628a-db86-4f89-a8fe-b4b4cad2e183
+    Animations/tree.003Action: !<reference> 178f7aaa-4899-4ec3-b75a-88c56b2547b0
+    Animations/tree.004Action: !<reference> 187e50a1-a93a-47c9-aea6-a667b9bd0f5d
+    Animations/tree.005Action: !<reference> be5016ee-98a0-4365-b0eb-3ec56a2c7212
+    Animations/tree.006Action: !<reference> c610a444-d510-41cb-b95d-66285067c0b1
+    Animations/tree.007Action: !<reference> 479be36d-9d30-4cbe-93f9-a4bb4ec50969
+    Meshes/Cone: !<reference> ee5bfaec-16f3-48c6-8575-53fd2eaa808d
+    Meshes/Cone.001: !<reference> 2770c8ef-089f-4b7b-b272-13b79f20ea65
+    Meshes/Cone.002: !<reference> 72d21068-071a-4716-b11b-4af73616b945
+    Meshes/Cone.003: !<reference> 60515fe8-c9a3-4ee7-a0dc-cab57fe844e3
+    Meshes/Cone.004: !<reference> a0d61af1-f1b6-48be-8dd7-72bb50073188
+    Meshes/Cone.005: !<reference> 3baf942f-bfad-443b-85a1-0c6e17904602
+    Meshes/Cone.007: !<reference> 1ecf251e-02a3-4dd2-ac21-44f08efe816e
+    Meshes/Cone.008: !<reference> 6abee5f6-016a-4080-a031-525dfc762ab6
+    Scene: !<reference> d7285803-6116-493d-8b76-e201613a40de
+    ab3ca46f14944028: !<reference> 40a6d8b7-c804-40e5-a076-074c0dc56412
+    ba3f38e332fbdbe4: !<reference> 2b1cfcf8-2755-442e-8aef-9b0454934c0d
+    cbe47e9ab657f15f: !<reference> 563649b1-0c09-45b2-a767-a6756d2a0afc
+    d6af9cb7c1018f0f: !<reference> 8c60fb66-b5cc-4c96-8051-29f1967b601a
+    edb0c3ccf10fb75a: !<reference> d161e8ce-09e5-428f-acb4-c7d7bae74995
+    ee09dade68e6e290: !<reference> 881ac105-25ba-415a-8e21-bb4d4297922a
+    f7823ed8e3d3f631: !<reference> 5db9e0f4-dbea-4d76-bdfe-f0076c9445e3
+    f8c5958ec154cd76: !<reference> 11bfa7eb-6125-4f1a-b0c6-6806f1c4b40e
+    f93667566f3f526b: !<reference> c73f462a-8e2f-4347-a1cf-7b789e49f9fb
+    fccd6902d6683ec2: !<reference> d0fd1347-c665-4157-878b-6a57ba4355a0
+    fead6d65f63a73cc: !<reference> e00d4aa3-a51b-4cec-a01c-c7510d0c0e75
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> d7285803-6116-493d-8b76-e201613a40de
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 0f6553cc-d34c-4f0c-a2c9-c3de29f17b27
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+    ExtensionMappings:
+      mesh: None Compression
+    Overrides:
+      {}
+- !<ObjectPrefabAssetData/0f6553cc-d34c-4f0c-a2c9-c3de29f17b27>
+  Prototype: !<ObjectOwner/2debc23d-019e-475f-a8c7-982fc8845ae2>
+    PackagePath: ""
+    objects:
+      - !<own> 5b13ae29-e386-4fb7-44f9-8e6e16db767e
+- !<RenderMeshVisual/11bfa7eb-6125-4f1a-4f39-97f90e3b4bf1>
+  PrefabRemaps:
+    []
+  Name: Cone.005
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 3baf942f-bfad-443b-85a1-0c6e17904602
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/2b1cfcf8-2755-442e-7510-64fbab6cb3f2>
+  PrefabRemaps:
+    []
+  Name: Cone.003
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 60515fe8-c9a3-4ee7-a0dc-cab57fe844e3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/40a6d8b7-c804-40e5-5f89-f8b3f23a9bed>
+  PrefabRemaps:
+    []
+  Name: tree.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 881ac105-25ba-415a-71de-44b2bd686dd5
+- !<SceneObject/43af7247-3bc8-4841-4a85-8fcd61ceb8bf>
+  PrefabRemaps:
+    []
+  Name: tree.007
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e00d4aa3-a51b-4cec-5fe3-38aef2f3f18a
+- !<SceneObject/4fc01166-9fa4-4c09-6133-d2345cd97ef3>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ee2cc3ed-fbae-4b6b-75f6-c2c2a8344a9d
+  Components:
+    []
+- !<SceneObject/563649b1-0c09-45b2-5898-598a92d5f503>
+  PrefabRemaps:
+    []
+  Name: tree.004
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d161e8ce-09e5-428f-534b-38284518b66a
+- !<SceneObject/5b13ae29-e386-4fb7-44f9-8e6e16db767e>
+  PrefabRemaps:
+    []
+  Name: tree-test2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4fc01166-9fa4-4c09-6133-d2345cd97ef3
+  Components:
+    []
+- !<AnimationPlayer/5db9e0f4-dbea-4d76-4201-0ff8936bba1c>
+  PrefabRemaps:
+    []
+  Name: component_8
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> be5016ee-98a0-4365-b0eb-3ec56a2c7212
+      Name: tree.005Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 76.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 178f7aaa-4899-4ec3-b75a-88c56b2547b0
+      Name: tree.003Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 71.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 479be36d-9d30-4cbe-93f9-a4bb4ec50969
+      Name: tree.007Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 81.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 187e50a1-a93a-47c9-aea6-a667b9bd0f5d
+      Name: tree.004Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 73.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 94f7628a-db86-4f89-a8fe-b4b4cad2e183
+      Name: tree.002Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 68.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 80159435-f7f4-467f-a77a-304a7cfdc57d
+      Name: tree.001Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 66.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> c610a444-d510-41cb-b95d-66285067c0b1
+      Name: tree.006Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 78.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 5468bf36-c096-4360-88f5-866635419dab
+      Name: tree.000Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 63.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+- !<SceneObject/6a73f54e-5bda-4814-68a8-25a09cd58996>
+  PrefabRemaps:
+    []
+  Name: tree.003
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2b1cfcf8-2755-442e-7510-64fbab6cb3f2
+- !<RenderMeshVisual/78188ba8-69dd-4c61-727c-eade7730f0d9>
+  PrefabRemaps:
+    []
+  Name: Cone.002
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 72d21068-071a-4716-b11b-4af73616b945
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/881ac105-25ba-415a-71de-44b2bd686dd5>
+  PrefabRemaps:
+    []
+  Name: Cone.001
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 2770c8ef-089f-4b7b-b272-13b79f20ea65
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/8c60fb66-b5cc-4c96-7fae-d60e69849fe5>
+  PrefabRemaps:
+    []
+  Name: Cone
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> ee5bfaec-16f3-48c6-8575-53fd2eaa808d
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/a7848ad6-0d4d-4aa8-50a4-b92a9b7d22ad>
+  PrefabRemaps:
+    []
+  Name: tree.002
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 78188ba8-69dd-4c61-727c-eade7730f0d9
+- !<RenderMeshVisual/af27ad7b-1f22-43d2-6ae7-7597be3f3589>
+  PrefabRemaps:
+    []
+  Name: Cone.007
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 1ecf251e-02a3-4dd2-ac21-44f08efe816e
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/c73f462a-8e2f-4347-5e30-848761b60604>
+  PrefabRemaps:
+    []
+  Name: tree.005
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 11bfa7eb-6125-4f1a-4f39-97f90e3b4bf1
+- !<SceneObject/cb79f2e2-42a1-4e4a-47c8-0649e90ee51a>
+  PrefabRemaps:
+    []
+  Name: tree.000
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8c60fb66-b5cc-4c96-7fae-d60e69849fe5
+- !<SceneObject/d0fd1347-c665-4157-7874-95a845bcaa5f>
+  PrefabRemaps:
+    []
+  Name: tree.006
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 20.042700, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.000000, y: 0.000000, z: 0.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> af27ad7b-1f22-43d2-6ae7-7597be3f3589
+- !<RenderMeshVisual/d161e8ce-09e5-428f-534b-38284518b66a>
+  PrefabRemaps:
+    []
+  Name: Cone.004
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> a0d61af1-f1b6-48be-8dd7-72bb50073188
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/e00d4aa3-a51b-4cec-5fe3-38aef2f3f18a>
+  PrefabRemaps:
+    []
+  Name: Cone.008
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 6abee5f6-016a-4080-a031-525dfc762ab6
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/ee2cc3ed-fbae-4b6b-75f6-c2c2a8344a9d>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> cb79f2e2-42a1-4e4a-47c8-0649e90ee51a
+    - !<own> 40a6d8b7-c804-40e5-5f89-f8b3f23a9bed
+    - !<own> a7848ad6-0d4d-4aa8-50a4-b92a9b7d22ad
+    - !<own> 6a73f54e-5bda-4814-68a8-25a09cd58996
+    - !<own> 563649b1-0c09-45b2-5898-598a92d5f503
+    - !<own> c73f462a-8e2f-4347-5e30-848761b60604
+    - !<own> d0fd1347-c665-4157-7874-95a845bcaa5f
+    - !<own> 43af7247-3bc8-4841-4a85-8fcd61ceb8bf
+  Components:
+    - !<own> 5db9e0f4-dbea-4d76-4201-0ff8936bba1c

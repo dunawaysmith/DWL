@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/4e74f292-2d8a-6039-d2c4-4ceed740d29c>
+  ImportedAssetIds:
+    VFXGraph: !<reference> 3e6b9da5-f625-4f54-aa90-1e7525478fd6
+  ImporterName: VFXAssetImporter
+  PrimaryAsset: !<reference> 3e6b9da5-f625-4f54-aa90-1e7525478fd6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    VFXGraph: !<own> 7c0d0332-271e-4ae6-a0bd-6c2744bee262
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<VFXAssetData/7c0d0332-271e-4ae6-a0bd-6c2744bee262>
+  Mesh: !<reference> 00000000-0000-0000-0000-000000000000
+  SystemPassProperties:
+    39: !<VFXSystemPassProperties/c859c7ce-6fe1-49fb-8507-9b016bf8d5a1>
+      FeedbackProperties:
+        {}
+      SimulateProperties:
+        spawnPosition:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
+        directionPosition:
+          typeIdx: 4
+          value: {x: 0.000000, y: 10.000000, z: 0.000000}
+        pauseSpawn:
+          typeIdx: 2
+          value: false
+        noiseTex:
+          typeIdx: 9
+          value:
+            id: ffffffff-ffff-ffff-ffff-ffffffffffff
+            sampler:
+              filteringMode: Trilinear
+              wrapModeU: Repeat
+              wrapModeV: Repeat
+              wrapModeW: Repeat
+              borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+              mipmaps: false
+            type: Texture3D
+      RenderProperties:
+        flipbookTex:
+          typeIdx: 9
+          value:
+            id: b224681b-5fbb-4c3c-a93a-f2bbf1005f55
+            sampler:
+              filteringMode: Trilinear
+              wrapModeU: Repeat
+              wrapModeV: Repeat
+              wrapModeW: Repeat
+              borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+              mipmaps: true
+            type: Texture2D
+      FeedbackDefines:
+        []
+      SimulateDefines:
+        []
+      RenderDefines:
+        []
