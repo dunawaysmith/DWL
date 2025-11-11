@@ -1,0 +1,82 @@
+- !<ObjectPrefab/209fcb41-9013-4625-a39a-7cb456b87a53>
+  PackagePath: ""
+  objects:
+    - !<own> 9ad5295d-2d96-40e6-84a5-c92d080d12e6
+  LazyLoading: false
+  RetainAssets: true
+- !<VFXComponent/4c1e3ceb-20f9-49a6-911e-3d06539b77e0>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> 5587752d-68cd-4695-b1a2-d30d7592a8c1
+- !<SceneObject/5af77d84-76a5-4076-b249-e6d54de6b49e>
+  PrefabRemaps:
+    []
+  Name: Snow_ground
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e9b8defe-cd98-4cdd-a72c-bda99c9ce156
+- !<SceneObject/9ad5295d-2d96-40e6-84a5-c92d080d12e6>
+  PrefabRemaps:
+    - 4c1e3ceb-20f9-49a6-911e-3d06539b77e0: 4c1e3ceb-20f9-49a6-6ee1-c2f9ac64881f
+    - 5af77d84-76a5-4076-b249-e6d54de6b49e: 5af77d84-76a5-4076-4db6-192ab2194b61
+    - 9ad5295d-2d96-40e6-84a5-c92d080d12e6: 9ad5295d-2d96-40e6-7b5a-36d2f7f2ed19
+    - cae6e7b9-24ab-413c-ab82-0f5bef7d6ea8: cae6e7b9-24ab-413c-547d-f0a410829157
+    - e9b8defe-cd98-4cdd-a72c-bda99c9ce156: e9b8defe-cd98-4cdd-58d3-425663631ea9
+  Name: SnowVFX__PLACE_IN_SCENE
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> cae6e7b9-24ab-413c-ab82-0f5bef7d6ea8
+    - !<own> 5af77d84-76a5-4076-b249-e6d54de6b49e
+  Components:
+    []
+- !<SceneObject/cae6e7b9-24ab-413c-ab82-0f5bef7d6ea8>
+  PrefabRemaps:
+    []
+  Name: Snow
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4c1e3ceb-20f9-49a6-911e-3d06539b77e0
+- !<VFXComponent/e9b8defe-cd98-4cdd-a72c-bda99c9ce156>
+  PrefabRemaps:
+    []
+  Name: VFX Component 2
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> 16238bd2-f01d-44df-a929-b072bb1a9afa

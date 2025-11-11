@@ -49,16 +49,20 @@
     landscapeScaleInDelayMax: false
     landscapeScaleInDelayMin: false
     landscapeScaleInDuration: false
+    landscapeStartDelay: false
     ornamentScaleInDelayMax: false
     ornamentScaleInDelayMin: false
     ornamentScaleInDuration: false
+    ornamentStartDelay: false
     ornaments: false
+    pinchUIHand: false
     soundtrackAudio: false
     starBorder: false
     starBorderMaterial: false
     starParticlesLeft: false
     starParticlesRight: false
     treeAnimationDuration: false
+    uiComp: false
     uiFadeInDuration: false
     uiFadeOutDuration: false
     uiMessageDuration: false
@@ -99,6 +103,8 @@
       landscapeElements: !<reference.SceneObject[]>
         []
       instructionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      uiComp: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      pinchUIHand: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       soundtrackAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
       windSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
       explosionSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
@@ -122,9 +128,11 @@
       ornamentScaleInDuration: 0.500000
       ornamentScaleInDelayMin: !<float> 0.000000
       ornamentScaleInDelayMax: !<float> 3.000000
+      ornamentStartDelay: !<float> 0.000000
       landscapeScaleInDuration: !<float> 2.000000
       landscapeScaleInDelayMin: !<float> 0.000000
       landscapeScaleInDelayMax: !<float> 2.000000
+      landscapeStartDelay: !<float> 0.000000
       uiMessageDuration: !<float> 5.000000
       uiFadeInDuration: 0.500000
       uiFadeOutDuration: 0.500000
@@ -149,6 +157,8 @@
     - // @input SceneObject starParticlesRight
     - "// @input SceneObject[] landscapeElements = {}"
     - // @input Component.Text instructionText
+    - // @input SceneObject uiComp
+    - // @input SceneObject pinchUIHand
     - // @input Component.AudioComponent soundtrackAudio
     - // @input Component.AudioComponent windSound
     - // @input Component.AudioComponent explosionSound
@@ -172,9 +182,11 @@
     - // @input float ornamentScaleInDuration = 0.5
     - // @input float ornamentScaleInDelayMin
     - // @input float ornamentScaleInDelayMax = 3
+    - // @input float ornamentStartDelay
     - // @input float landscapeScaleInDuration = 2
     - // @input float landscapeScaleInDelayMin
     - // @input float landscapeScaleInDelayMax = 2
+    - // @input float landscapeStartDelay
     - // @input float uiMessageDuration = 5
     - // @input float uiFadeInDuration = 0.5
     - // @input float uiFadeOutDuration = 0.5

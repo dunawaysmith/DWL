@@ -25,6 +25,8 @@ export class WinterStarController extends BaseScriptComponent {
     
     // UI
     @input instructionText: Text;
+    @input uiComp: SceneObject;
+    @input pinchUIHand: SceneObject; // NEW: shows during pinch instruction
     
     // Audio
     @input soundtrackAudio: AudioComponent;
@@ -64,11 +66,13 @@ export class WinterStarController extends BaseScriptComponent {
     @input ornamentScaleInDuration: number = 0.5;
     @input ornamentScaleInDelayMin: number = 0.0;
     @input ornamentScaleInDelayMax: number = 3.0;
+    @input ornamentStartDelay: number = 0.0; // NEW base delay before any ornament starts
     
     // Landscape Elements
     @input landscapeScaleInDuration: number = 2.0;
     @input landscapeScaleInDelayMin: number = 0.0;
     @input landscapeScaleInDelayMax: number = 2.0;
+    @input landscapeStartDelay: number = 0.0; // NEW base delay before any landscape element starts
     
     // UI Settings
     @input uiMessageDuration: number = 5.0;
@@ -134,12 +138,14 @@ export class WinterStarController extends BaseScriptComponent {
             print('WinterStarController: Background soundtrack started');
         }
         
-        // Start halo rotation
-        //this.startHaloRotation();
-        
-        // Hide UI initially
-        if (this.instructionText) {
+        // Hide UI initially (prefer container)
+        if (this.uiComp) {
+            this.uiComp.enabled = false;
+        } else if (this.instructionText) {
             this.instructionText.enabled = false;
+        }
+        if (this.pinchUIHand) {
+            this.pinchUIHand.enabled = false;
         }
         
         // Hide wind animation initially
@@ -209,8 +215,6 @@ export class WinterStarController extends BaseScriptComponent {
         ];
 
         this.fragmentData.forEach((fragment) => {
-            // Don't store position yet - will be done after descent animation
-            
             // Find Interactable component by checking ScriptComponents
             const interactable = fragment.sceneObject.getComponent(Interactable.getTypeName()) as Interactable;
             
@@ -394,7 +398,7 @@ export class WinterStarController extends BaseScriptComponent {
         
         // Fade out halo
         if (this.haloComplete) {
-            LSTween.alphaTo(this.haloCompleteMaterial, 0, this.haloFadeDuration).start()
+            LSTween.alphaTo(this.haloCompleteMaterial, 0, this.haloFadeDuration).start();
         }
         
         // Fade starBorder to 20% alpha using material input
@@ -576,7 +580,7 @@ export class WinterStarController extends BaseScriptComponent {
         
         // Fade in halo
         if (this.haloComplete) {
-            LSTween.alphaTo(this.haloCompleteMaterial, 1, this.haloFadeDuration).start()
+            LSTween.alphaTo(this.haloCompleteMaterial, 1, this.haloFadeDuration).start();
         }
         
         // Fade starBorder back to 100% alpha using material input
@@ -646,29 +650,27 @@ export class WinterStarController extends BaseScriptComponent {
     }
     
     /**
-     * Animate ornaments scaling in randomly
+     * Animate ornaments scaling in randomly (with base delay)
      */
     private animateOrnaments(): void {
         if (!this.ornaments || this.ornaments.length === 0) {
             return;
         }
         
-        this.ornaments.forEach((ornament, index) => {
+        this.ornaments.forEach((ornament) => {
             if (!ornament) return;
             
-            // Random delay for each ornament
+            // Random delay for each ornament plus base start delay
             const randomDelay = this.ornamentScaleInDelayMin + 
                 Math.random() * (this.ornamentScaleInDelayMax - this.ornamentScaleInDelayMin);
+            const totalDelay = this.ornamentStartDelay + randomDelay;
             
             const delayedEvent = this.createEvent('DelayedCallbackEvent');
             delayedEvent.bind(() => {
                 ornament.enabled = true;
                 
                 const transform = ornament.getTransform();
-                const startScale = new vec3(0.01, 0.01, 0.01);
-                const targetScale = new vec3(1, 1, 1);
-                
-                transform.setLocalScale(startScale);
+                transform.setLocalScale(new vec3(0.01, 0.01, 0.01));
                 
                 const tweenData = { x: 0.01, y: 0.01, z: 0.01 };
                 const scaleTween = new Tween(tweenData)
@@ -681,36 +683,34 @@ export class WinterStarController extends BaseScriptComponent {
                 
                 this.activeTweens.push(scaleTween);
             });
-            delayedEvent.reset(randomDelay);
+            delayedEvent.reset(totalDelay);
         });
         
         print(`WinterStarController: Animating ${this.ornaments.length} ornaments`);
     }
     
     /**
-     * Animate landscape elements scaling in randomly
+     * Animate landscape elements scaling in randomly (with base delay)
      */
     private animateLandscapeElements(): void {
         if (!this.landscapeElements || this.landscapeElements.length === 0) {
             return;
         }
         
-        this.landscapeElements.forEach((element, index) => {
+        this.landscapeElements.forEach((element) => {
             if (!element) return;
             
-            // Random delay for each element
+            // Random delay for each element plus base start delay
             const randomDelay = this.landscapeScaleInDelayMin + 
                 Math.random() * (this.landscapeScaleInDelayMax - this.landscapeScaleInDelayMin);
+            const totalDelay = this.landscapeStartDelay + randomDelay;
             
             const delayedEvent = this.createEvent('DelayedCallbackEvent');
             delayedEvent.bind(() => {
                 element.enabled = true;
                 
                 const transform = element.getTransform();
-                const startScale = new vec3(0.01, 0.01, 0.01);
-                const targetScale = new vec3(1, 1, 1);
-                
-                transform.setLocalScale(startScale);
+                transform.setLocalScale(new vec3(0.01, 0.01, 0.01));
                 
                 const tweenData = { x: 0.01, y: 0.01, z: 0.01 };
                 const scaleTween = new Tween(tweenData)
@@ -723,7 +723,7 @@ export class WinterStarController extends BaseScriptComponent {
                 
                 this.activeTweens.push(scaleTween);
             });
-            delayedEvent.reset(randomDelay);
+            delayedEvent.reset(totalDelay);
         });
         
         print(`WinterStarController: Animating ${this.landscapeElements.length} landscape elements`);
@@ -753,6 +753,8 @@ export class WinterStarController extends BaseScriptComponent {
     
     /**
      * Update instruction text with fade in/out animations
+     * (Uses UI container if available)
+     * Also toggles PinchUIHand visibility when message includes "pinch"
      */
     private updateInstructionText(message: string, onComplete?: () => void): void {
         if (!this.instructionText) {
@@ -771,21 +773,34 @@ export class WinterStarController extends BaseScriptComponent {
         
         // Set the text
         this.instructionText.text = message;
-        this.instructionText.enabled = true;
+
+        // Show container (preferred) or text
+        if (this.uiComp) {
+            this.uiComp.enabled = true;
+        } else {
+            this.instructionText.enabled = true;
+        }
+        
+        // Toggle pinch UI hand based on message content
+        if (this.pinchUIHand) {
+            const isPinchStep = message.toLowerCase().indexOf("pinch") !== -1;
+            this.pinchUIHand.enabled = isPinchStep;
+        }
         
         // Get the text material for alpha manipulation
         const textObject = this.instructionText.getSceneObject();
         const renderMesh = textObject.getComponent('Component.RenderMeshVisual') as RenderMeshVisual;
         
         if (renderMesh) {
+            const rgb = new vec3(renderMesh.mainPass.baseColor.r, renderMesh.mainPass.baseColor.g, renderMesh.mainPass.baseColor.b);
+
             // Fade in
             const fadeInData = { alpha: 0 };
             const fadeInTween = new Tween(fadeInData)
                 .to({ alpha: this.originalTextAlpha }, this.uiFadeInDuration * 1000)
                 .easing(Easing.Quadratic.InOut)
                 .onUpdate(() => {
-                    const color = renderMesh.mainPass.baseColor;
-                    renderMesh.mainPass.baseColor = new vec4(color.r, color.g, color.b, fadeInData.alpha);
+                    renderMesh.mainPass.baseColor = new vec4(rgb.x, rgb.y, rgb.z, fadeInData.alpha);
                 })
                 .onComplete(() => {
                     // Wait for message duration, then fade out
@@ -796,11 +811,19 @@ export class WinterStarController extends BaseScriptComponent {
                             .to({ alpha: 0 }, this.uiFadeOutDuration * 1000)
                             .easing(Easing.Quadratic.InOut)
                             .onUpdate(() => {
-                                const color = renderMesh.mainPass.baseColor;
-                                renderMesh.mainPass.baseColor = new vec4(color.r, color.g, color.b, fadeOutData.alpha);
+                                renderMesh.mainPass.baseColor = new vec4(rgb.x, rgb.y, rgb.z, fadeOutData.alpha);
                             })
                             .onComplete(() => {
-                                this.instructionText.enabled = false;
+                                // Hide container (preferred) or text
+                                if (this.uiComp) {
+                                    this.uiComp.enabled = false;
+                                } else {
+                                    this.instructionText.enabled = false;
+                                }
+                                // Always hide pinch hand after message completes
+                                if (this.pinchUIHand) {
+                                    this.pinchUIHand.enabled = false;
+                                }
                                 this.uiHideTimer = null;
                                 if (onComplete) onComplete();
                             })
@@ -817,7 +840,14 @@ export class WinterStarController extends BaseScriptComponent {
             // Fallback if we can't get the material
             this.uiHideTimer = this.createEvent('DelayedCallbackEvent');
             this.uiHideTimer.bind(() => {
-                this.instructionText.enabled = false;
+                if (this.uiComp) {
+                    this.uiComp.enabled = false;
+                } else {
+                    this.instructionText.enabled = false;
+                }
+                if (this.pinchUIHand) {
+                    this.pinchUIHand.enabled = false;
+                }
                 this.uiHideTimer = null;
                 if (onComplete) onComplete();
             });
@@ -841,8 +871,8 @@ export class WinterStarController extends BaseScriptComponent {
         const color = material.mainPass.baseColor;
         material.mainPass.baseColor = new vec4(color.r, color.g, color.b, fromAlpha);
         
-        // Use LSTween.alphaTo
-        LSTween.alphaTo(material, toAlpha, duration);
+        // Use LSTween.alphaTo and START it
+        LSTween.alphaTo(material, toAlpha, duration).start();
         
         if (onComplete) {
             // Add completion callback using delayed event
@@ -891,8 +921,8 @@ export class WinterStarController extends BaseScriptComponent {
             return;
         }
         
-        // Use LSTween.alphaTo - signature is: alphaTo(material, alpha, time)
-        LSTween.alphaTo(material, toAlpha, duration);
+        // Use LSTween.alphaTo and START it
+        LSTween.alphaTo(material, toAlpha, duration).start();
         
         if (onComplete) {
             // Add completion callback using delayed event
