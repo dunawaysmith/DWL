@@ -1,0 +1,951 @@
+- !<AssetImportMetadata/5aa45347-9c12-4a6e-8c48-737b112d1b2f>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 78f074b6-2437-4c16-9c83-570eadeaf77a
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 78f074b6-2437-4c16-9c83-570eadeaf77a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 8399d862-92e7-4b1d-ad30-cdfff870e554
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/064280d0-0d88-4743-6398-7274ac10d1db>
+  PrefabRemaps:
+    []
+  Name: Bone.004-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 20.039061, y: -10.272969, z: 116.055908}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/0739ba57-62a0-4053-5acb-7b5bc224e269>
+  PrefabRemaps:
+    []
+  Name: branch.small.030
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -21.645594, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 38.075890, y: 38.075890, z: 38.075890}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d7a2ccf7-c94b-4d95-5df3-51fe1197b1d5
+    - !<own> dc3654a4-7894-4fe2-51e1-f5edcab45da5
+    - !<own> d99c41bb-4056-425e-6b66-daa0a5d8a365
+    - !<own> 8d7a5178-7558-4b3e-4978-2686d0049374
+    - !<own> 064280d0-0d88-4743-6398-7274ac10d1db
+    - !<own> 7f7c013e-3a27-4a73-6c24-7b7369b712b8
+    - !<own> 6bc30376-8c8a-4636-6fac-309d548f60b0
+    - !<own> 2d7cc253-4822-4400-68a6-b40473e0f89d
+    - !<own> a596e305-ff38-41e7-7588-7a24244f57af
+    - !<own> c7c17af6-2674-4e2e-5ed7-f664c06530c4
+    - !<own> 23106e91-44d3-4ecb-6532-b00415005a2c
+    - !<own> 67e976d5-eefe-4fe1-63fb-97849ee940cf
+    - !<own> 8d8303fe-e883-4e72-6cc6-aaddbccc67d1
+    - !<own> 292b34c0-47e9-49a7-5041-5c47f817e9f8
+    - !<own> 29184cbd-6d65-40a9-43e7-ce3cbc5e7e8f
+    - !<own> 2a763c3c-18b2-43be-6c86-c57551bdd61f
+    - !<own> f999bb30-cd2b-4e28-53fd-49bd4197f688
+  Components:
+    []
+- !<SceneObject/23106e91-44d3-4ecb-6532-b00415005a2c>
+  PrefabRemaps:
+    []
+  Name: Bone.010-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -64.420776, y: -26.826624, z: -102.189873}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/29184cbd-6d65-40a9-43e7-ce3cbc5e7e8f>
+  PrefabRemaps:
+    []
+  Name: Bone.014-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 20.409323, y: 10.666688, z: -116.448456}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/292b34c0-47e9-49a7-5041-5c47f817e9f8>
+  PrefabRemaps:
+    []
+  Name: Bone.013-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 0.000000, y: -0.000000, z: -119.188957}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/2a763c3c-18b2-43be-6c86-c57551bdd61f>
+  PrefabRemaps:
+    []
+  Name: Bone.015-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 41.288151, y: 19.771101, z: -111.066551}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/2d7cc253-4822-4400-68a6-b40473e0f89d>
+  PrefabRemaps:
+    []
+  Name: Bone.007-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -41.361832, y: 20.667923, z: 111.845001}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/67e976d5-eefe-4fe1-63fb-97849ee940cf>
+  PrefabRemaps:
+    []
+  Name: Bone.011-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -40.844872, y: -19.317131, z: -110.938126}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/6bc30376-8c8a-4636-6fac-309d548f60b0>
+  PrefabRemaps:
+    []
+  Name: Bone.006-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -20.481209, y: 11.059342, z: 117.183853}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/7f7c013e-3a27-4a73-6c24-7b7369b712b8>
+  PrefabRemaps:
+    []
+  Name: Bone.005-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -0.000000, y: -0.000020, z: 118.845840}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<ObjectPrefabAssetData/8399d862-92e7-4b1d-ad30-cdfff870e554>
+  Prototype: !<ObjectOwner/458ce4da-d43c-4aa5-af9e-125fcf332791>
+    PackagePath: ""
+    objects:
+      - !<own> d4d705d5-8515-4360-6911-d5e8f8040b6f
+- !<SceneObject/88664155-d362-400b-45f5-9b7c3e60b3fc>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> aa86882e-fb60-42f0-4be0-2ac61946d5c6
+  Components:
+    []
+- !<SceneObject/8d7a5178-7558-4b3e-4978-2686d0049374>
+  PrefabRemaps:
+    []
+  Name: Bone.003-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.084069, z: 0.004017}
+    Rotation: {x: 40.997753, y: -18.475512, z: 110.030861}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/8d8303fe-e883-4e72-6cc6-aaddbccc67d1>
+  PrefabRemaps:
+    []
+  Name: Bone.012-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -19.806320, y: -10.321141, z: -116.449356}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<AnimationPlayer/9aa7dcfc-d354-481a-7f96-8cb7d1a5b991>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 0948b4c7-c8d8-4c60-99f4-d87fcb048e7f
+      Name: branch.Anim.039
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> fb7ee458-4371-4d6e-8bd2-d44f642242ea
+      Name: branch.Anim.038
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.999969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> b1c92a8d-5a57-4973-866e-96ef8a7fdef3
+      Name: branch.Anim.037
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.749969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 096a6076-2b8a-4cf3-ab5b-c7ed4df9fdd2
+      Name: branch.Anim.033
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.999939
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 6fa1a205-196d-4c69-8b07-b5a10abfbb32
+      Name: branch.Anim.032
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.499924
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 5065ab35-2349-4f5b-9a88-bb90d6ee7fcf
+      Name: branch.Anim.031
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249939
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> b8607f22-6dfa-478b-9aae-935705ab450c
+      Name: branch.Anim.028
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 510.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> dc3b0972-02a7-48fd-9eed-acd8aa936e8d
+      Name: branch.Anim.027
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 503.749969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 68f5b2bb-cddc-46de-af30-2d2003d0087e
+      Name: branch.Anim.026
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 497.500031
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> f4b439f2-0ffc-4a33-9005-df9d73991a4c
+      Name: branch.Anim.024
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 484.999969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> acbd6603-e21e-4439-a616-41d6565e84e6
+      Name: branch.Anim.022
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 472.500000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 5dc8a573-1918-4e91-b342-e39ceb6ce04e
+      Name: branch.Anim.019
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 516.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 4b027e6d-6e11-488b-a597-1213f5c7d9b2
+      Name: branch.Anim.016
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 325.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 9bd1d02b-636d-4204-996e-864c61ff666d
+      Name: branch.Anim.020
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 458.000305
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> a1ffb7ce-ff01-4e13-a4fa-704317c76bd3
+      Name: branch.Anim.017
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 510.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 36ee3ab2-77ca-4950-9488-b695e5d670cf
+      Name: branch.Anim.014
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 318.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 2b7f6de8-e73d-4cd2-9289-80a7b364da90
+      Name: branch.Anim.013
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 497.500031
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> b3a42757-5e1c-4fc8-a8e0-d93661b9c153
+      Name: branch.Anim.035
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> ab05abf8-0d94-4022-a209-fe4915e2ffbe
+      Name: branch.Anim.011
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 491.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 07a370ac-e526-4242-9690-7efeb35a2baa
+      Name: branch.Anim.012
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 312.500000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 35c97717-d6a9-488b-9c04-6b5c79bc9225
+      Name: branch.Anim.021
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 466.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 5afa9ad0-7ae9-41d3-a0cd-9b4179432510
+      Name: branch.Anim.029
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 516.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 02eda079-95f0-4060-8ddd-406036f9182c
+      Name: branch.Anim.010
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 306.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 40071062-0068-4f5d-9032-a5d4927f7cd6
+      Name: branch.Anim.006
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 295.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> dca2fba8-57f7-4727-ab64-6f8f02af9aa6
+      Name: branch.Anim.040
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 99.249962
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 40c9e324-d39b-45d4-b95b-34a1886c18ad
+      Name: branch.Anim.009
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 484.999969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 46f4b66b-ac18-4f4b-913e-30278b4f1222
+      Name: branch.Anim.007
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 480.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> ea9b911a-ead4-4410-8dc3-0f3cb3e30b38
+      Name: branch.Anim.018
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 331.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 7388a933-ad98-4634-a3d7-87beb19a3c2c
+      Name: branch.Anim.005
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 472.500000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 97ceaa38-cc6a-4774-854f-7b4bbf54293c
+      Name: branch.Anim.025
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 491.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 4bd6c7d3-877e-48a7-8b06-d72c74c3e4a6
+      Name: branch.Anim.002
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 281.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 941f7a43-6842-47ea-aed3-9eb3eebbfe4c
+      Name: branch.Anim.034
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.999939
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 1683f846-2427-4dbb-b30d-a05753f508f0
+      Name: branch.Anim
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 274.000305
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 5bb47389-bab3-427b-8873-8d97576f8eb8
+      Name: branch.Anim.003
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 466.250000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 39417ad7-65a0-47b3-acb4-d940a4a417c1
+      Name: branch.Anim.030
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 185.999939
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> be92dd6a-d497-478f-9867-b6fb24933b8d
+      Name: branch.Anim.023
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 480.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> dfaa5741-5119-46cf-8c0a-ea1d43775f29
+      Name: branch-grow
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 124.999992
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 9490f382-aaaf-44a0-a0a6-7c7956ba9777
+      Name: branch.Anim.001
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 458.000305
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 8fa0bbbc-fe1a-492f-8046-b700a98cb19b
+      Name: branch.Anim.036
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.499939
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> c94452c3-f664-4343-a36f-60b92e06d7a0
+      Name: branch.Anim.015
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 503.749969
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 2e7ac52d-ecc0-4a83-b733-c7d62eeaad74
+      Name: branch.Anim.008
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 300.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 35a06cca-704e-440b-b8f9-d8cd0859a87e
+      Name: branch.Anim.004
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 287.500000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+- !<SceneObject/a596e305-ff38-41e7-7588-7a24244f57af>
+  PrefabRemaps:
+    []
+  Name: Bone.008-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -64.661537, y: 27.671402, z: 102.402130}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/aa86882e-fb60-42f0-4be0-2ac61946d5c6>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0739ba57-62a0-4053-5acb-7b5bc224e269
+  Components:
+    - !<own> 9aa7dcfc-d354-481a-7f96-8cb7d1a5b991
+    - !<own> d8cc8fab-c4ed-44c2-5e70-daf153c2066d
+- !<RenderMeshVisual/c524caa0-84e5-48c5-46fd-0da86a0869b0>
+  PrefabRemaps:
+    []
+  Name: branch2.041
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ccdea632-4473-457a-bb69-a4d28b7a5766
+  Mesh: !<reference> f4230e97-b2c2-4ec9-a1df-681b30246abf
+  Skin: !<reference> d8cc8fab-c4ed-44c2-5e70-daf153c2066d
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/c7c17af6-2674-4e2e-5ed7-f664c06530c4>
+  PrefabRemaps:
+    []
+  Name: Bone.009-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: -89.771111, y: -30.140928, z: -90.115585}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/d4d705d5-8515-4360-6911-d5e8f8040b6f>
+  PrefabRemaps:
+    []
+  Name: christmas-tree-branch3
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 88664155-d362-400b-45f5-9b7c3e60b3fc
+  Components:
+    []
+- !<SceneObject/d7a2ccf7-c94b-4d95-5df3-51fe1197b1d5>
+  PrefabRemaps:
+    []
+  Name: branch2.031
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c524caa0-84e5-48c5-46fd-0da86a0869b0
+- !<Skin/d8cc8fab-c4ed-44c2-5e70-daf153c2066d>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  skinBones:
+    Bone.001-branch1: !<reference> dc3654a4-7894-4fe2-51e1-f5edcab45da5
+    Bone.002-branch1: !<reference> d99c41bb-4056-425e-6b66-daa0a5d8a365
+    Bone.003-branch1: !<reference> 8d7a5178-7558-4b3e-4978-2686d0049374
+    Bone.004-branch1: !<reference> 064280d0-0d88-4743-6398-7274ac10d1db
+    Bone.005-branch1: !<reference> 7f7c013e-3a27-4a73-6c24-7b7369b712b8
+    Bone.006-branch1: !<reference> 6bc30376-8c8a-4636-6fac-309d548f60b0
+    Bone.007-branch1: !<reference> 2d7cc253-4822-4400-68a6-b40473e0f89d
+    Bone.008-branch1: !<reference> a596e305-ff38-41e7-7588-7a24244f57af
+    Bone.009-branch1: !<reference> c7c17af6-2674-4e2e-5ed7-f664c06530c4
+    Bone.010-branch1: !<reference> 23106e91-44d3-4ecb-6532-b00415005a2c
+    Bone.011-branch1: !<reference> 67e976d5-eefe-4fe1-63fb-97849ee940cf
+    Bone.012-branch1: !<reference> 8d8303fe-e883-4e72-6cc6-aaddbccc67d1
+    Bone.013-branch1: !<reference> 292b34c0-47e9-49a7-5041-5c47f817e9f8
+    Bone.014-branch1: !<reference> 29184cbd-6d65-40a9-43e7-ce3cbc5e7e8f
+    Bone.015-branch1: !<reference> 2a763c3c-18b2-43be-6c86-c57551bdd61f
+    Bone.016-branch1: !<reference> f999bb30-cd2b-4e28-53fd-49bd4197f688
+    branch.small.030: !<reference> 0739ba57-62a0-4053-5acb-7b5bc224e269
+    branch2.031: !<reference> d7a2ccf7-c94b-4d95-5df3-51fe1197b1d5
+- !<SceneObject/d99c41bb-4056-425e-6b66-daa0a5d8a365>
+  PrefabRemaps:
+    []
+  Name: Bone.002-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086321, z: 0.004017}
+    Rotation: {x: 64.353477, y: -25.321135, z: 101.603958}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/dc3654a4-7894-4fe2-51e1-f5edcab45da5>
+  PrefabRemaps:
+    []
+  Name: Bone.001-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 118.907173, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/f999bb30-cd2b-4e28-53fd-49bd4197f688>
+  PrefabRemaps:
+    []
+  Name: Bone.016-branch1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.086121, z: 0.004017}
+    Rotation: {x: 65.227341, y: 26.380735, z: -101.588120}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []

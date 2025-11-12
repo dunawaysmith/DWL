@@ -1,0 +1,751 @@
+- !<AssetImportMetadata/8c6bd775-dccf-4640-ab1a-394c110d3242>
+  ImportedAssetIds:
+    .hidden/sliver: !<reference> ac563cfd-745c-48ca-ba6a-b8f1631e25fd
+    031fa6378d1dd9b1: !<reference> 73a5728a-c8cf-40e2-a45e-ad92edb49927
+    035d6e7e7df7fc2f: !<reference> bac48895-c805-479d-b71c-4997089cecff
+    0492915f9fe970aa: !<reference> e8b78b9a-c0bd-4f8b-abf1-e26d98780f02
+    227b7779bc4c1c78: !<reference> 1decfa83-baf4-4201-a857-f0fc6bbe625b
+    2534fde7dbc2291d: !<reference> 1d09a043-3c50-415d-b292-d8ac42913325
+    270549b9b9996f4e: !<reference> 5c67bce2-2945-4eca-9331-94347c25f8a3
+    291c0d152ebdbc5b: !<reference> 2158d667-0ba2-4d12-96ae-a5507422c3b4
+    3023a70c08f921f1: !<reference> 7d04ba0b-5324-4932-beb1-0ba208eecc37
+    3113f818891a27d6: !<reference> bb33e32c-fc8f-4410-890b-750a9ee5dec7
+    45a9a87d48e6526e: !<reference> cb937646-c42a-4886-aa47-478e0e7b4ac5
+    482ec6c47ee50b6d: !<reference> 2021780e-97ff-4607-9756-c074064e214e
+    4a3e924fad0e2f27: !<reference> fef05227-6cc4-49bf-877c-7a2ea943cde6
+    4e4a7ba04eb688e0: !<reference> f422c96e-c0b3-4327-b3c4-b680729385df
+    4effffb79020ea88: !<reference> 3435e0ba-5eea-4295-9fa5-f9164b41392c
+    53da0afdb62480dd: !<reference> dd1e6fb7-d25d-4b2b-8db5-76e82a5f9a72
+    571d3d1d293ed2bc: !<reference> 9a609416-b717-4917-bee3-f917e51f0ed6
+    6578a236a8099294: !<reference> 734a3860-f539-490e-8228-0c3bedc374b4
+    66780cf3a4dcb2b8: !<reference> 6216f2ce-e717-479c-8651-c25881814792
+    71e536617a6896f4: !<reference> ae4f9e6c-9e04-4a0b-bbbc-95e2efd0e662
+    750eaee0ae343489: !<reference> 91f576ff-eff4-4c87-80c9-f3a03fc85120
+    781a26fce7166cb7: !<reference> 88961176-6057-421b-aea4-c1ba3026e64a
+    85d65e0334957852: !<reference> aaa103f6-2f0e-4fa0-8e19-2907dca9174f
+    869675ecb38770d4: !<reference> 45e867a1-1b15-4480-ae82-d8f118d4ae1d
+    90b3a9421f489778: !<reference> b9eb9e92-5734-4641-b652-fabcee2e5f11
+    96f664b015fcd573: !<reference> 6542152c-80f7-4bc9-9f6c-db452f7b71e2
+    Animations/chevron-lg: !<reference> 37d77112-6844-4be3-bf24-b6bab66430ca
+    Animations/chevron-sm: !<reference> 291ee7e2-61a3-40fa-a403-e416851c5789
+    Animations/chevron-squares: !<reference> 157a0c5a-f306-4298-bd1e-1d74d2167d2c
+    Materials/sliver: !<reference> 5e36058f-0384-4e54-bb12-3951baae23dc
+    Materials/sliver|sliver|GraphPassInfo: !<reference> f4b6301d-4290-48e8-9e27-a388e6e77313
+    Meshes/Plane.005: !<reference> d72a8733-d6d9-4e05-b108-56675f887c54
+    Meshes/Plane.006: !<reference> c37e0c4c-fc58-4c80-bfa3-102340387a45
+    Meshes/Plane.008: !<reference> cef1d4dd-994f-44fb-8e76-3bccf3e5efc3
+    Scene: !<reference> 312529ca-1b36-4ee2-92f0-bb3f10709772
+    a538c2b56977b71b: !<reference> 0f2dc6d2-b2f9-4e9d-865c-7eb0bfa3f95e
+    b1eafa6323edc54d: !<reference> f96cfc91-9a38-419a-a676-0056cbcaf1d4
+    b4fc274189e6d25c: !<reference> eb447809-5f8c-48ad-860d-68c0f0d288fe
+    b87ecf1d6a9b2073: !<reference> c86074cb-6312-434a-85b2-4d079852ac3e
+    c9dfca30c2a5d96f: !<reference> 7fef0863-661d-4bd7-9f9c-ab7cbc028e88
+    ca6c517752206071: !<reference> 4fa58619-b666-4841-aaf1-347e29185de5
+    cb5754318b6c5376: !<reference> b03c2b08-6516-4ec4-b218-58769dbe0dc5
+    ccb8a04f189debe3: !<reference> eecfb9dc-b380-4bb4-96f1-0a382cd1b43c
+    cd270fb6dd998007: !<reference> 9ff664a5-afb7-48e6-9ff6-ccaf9d426cf8
+    d7c842aa2d28c6a7: !<reference> c72857a3-a2cf-42cb-b1c8-65e2e5141768
+    e0e0992c0587e2c7: !<reference> 66241846-b343-4137-899e-29b2edef5625
+    f23fea1ebe7b433d: !<reference> e65e2521-68e4-4766-ab8e-3156ecc43a06
+    f7823ed8e3d3f631: !<reference> 59dbd93b-62eb-4783-891d-a84b13c91b51
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> 312529ca-1b36-4ee2-92f0-bb3f10709772
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> ca352fff-d893-4d93-9d57-99f1aa6d5bd2
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+    ExtensionMappings:
+      mesh: None Compression
+    Overrides:
+      {}
+- !<SceneObject/0f2dc6d2-b2f9-4e9d-79a3-814f405c06a1>
+  PrefabRemaps:
+    []
+  Name: Bone.004-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.105033, y: 0.000000, z: 0.529156}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/1d09a043-3c50-415d-4d6d-2753bd6eccda>
+  PrefabRemaps:
+    []
+  Name: Bone.006-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.243305, y: 0.000000, z: 0.380248}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/1decfa83-baf4-4201-57a8-0f0394419da4>
+  PrefabRemaps:
+    []
+  Name: chevron small.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b03c2b08-6516-4ec4-4de7-a7896241f23a
+- !<SceneObject/2021780e-97ff-4607-68a9-3f8bf9b1deb1>
+  PrefabRemaps:
+    []
+  Name: Bone.006-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.506514, y: -0.098034, z: 0.002026}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/2158d667-0ba2-4d12-6951-5aaf8bdd3c4b>
+  PrefabRemaps:
+    []
+  Name: Bone.005-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.099715, y: 0.000000, z: 0.529156}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/3435e0ba-5eea-4295-605a-06e9b4bec6d3>
+  PrefabRemaps:
+    []
+  Name: Bone.003-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.358536, y: -0.098034, z: 0.354556}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/45e867a1-1b15-4480-517d-270ee72b51e2>
+  PrefabRemaps:
+    []
+  Name: Bone.006-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.506514, y: -0.098034, z: 0.002026}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/4fa58619-b666-4841-550e-cb81d6e7a21a>
+  PrefabRemaps:
+    []
+  Name: chevron-small.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -0.279203}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1decfa83-baf4-4201-57a8-0f0394419da4
+    - !<own> 9a609416-b717-4917-411c-06e81ae0f129
+    - !<own> 9ff664a5-afb7-48e6-6009-335062bd9307
+    - !<own> 5c67bce2-2945-4eca-6cce-6bcb83da075c
+    - !<own> bac48895-c805-479d-48e3-b668f7631300
+    - !<own> 0f2dc6d2-b2f9-4e9d-79a3-814f405c06a1
+    - !<own> 2158d667-0ba2-4d12-6951-5aaf8bdd3c4b
+    - !<own> 1d09a043-3c50-415d-4d6d-2753bd6eccda
+    - !<own> e8b78b9a-c0bd-4f8b-540e-1d926787f0fd
+  Components:
+    []
+- !<AnimationPlayer/59dbd93b-62eb-4783-76e2-57b4ec36e4ae>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 157a0c5a-f306-4298-bd1e-1d74d2167d2c
+      Name: chevron-squares
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 750.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 37d77112-6844-4be3-bf24-b6bab66430ca
+      Name: chevron-lg
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 748.750000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 291ee7e2-61a3-40fa-a403-e416851c5789
+      Name: chevron-sm
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 750.000000
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+- !<SceneObject/5c67bce2-2945-4eca-6cce-6bcb83da075c>
+  PrefabRemaps:
+    []
+  Name: Bone.002-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.248624, y: 0.000000, z: 0.174169}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/6216f2ce-e717-479c-79ae-3da77e7eb86d>
+  PrefabRemaps:
+    []
+  Name: star-chevrons
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> fef05227-6cc4-49bf-7883-85d156bc3219
+  Components:
+    []
+- !<SceneObject/6542152c-80f7-4bc9-6093-24bad0848e1d>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4fa58619-b666-4841-550e-cb81d6e7a21a
+    - !<own> ae4f9e6c-9e04-4a0b-4443-6a1d102f199d
+    - !<own> 66241846-b343-4137-7661-d64d1210a9da
+  Components:
+    - !<own> 59dbd93b-62eb-4783-76e2-57b4ec36e4ae
+    - !<own> aaa103f6-2f0e-4fa0-71e6-d6f82356e8b0
+- !<SceneObject/66241846-b343-4137-7661-d64d1210a9da>
+  PrefabRemaps:
+    []
+  Name: chevron square-arm.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000439, y: 0.098034, z: 0.000431}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7d04ba0b-5324-4932-414e-f45df71133c8
+    - !<own> bb33e32c-fc8f-4410-76f4-8af5611a2138
+    - !<own> cb937646-c42a-4886-55b8-b871f184b53a
+    - !<own> 7fef0863-661d-4bd7-6063-548343fd7177
+    - !<own> 3435e0ba-5eea-4295-605a-06e9b4bec6d3
+    - !<own> eecfb9dc-b380-4bb4-690e-f5c7d32e4bc3
+    - !<own> f96cfc91-9a38-419a-5989-ffa934350e2b
+    - !<own> 45e867a1-1b15-4480-517d-270ee72b51e2
+    - !<own> 734a3860-f539-490e-7dd7-f3c4123c8b4b
+  Components:
+    []
+- !<SceneObject/734a3860-f539-490e-7dd7-f3c4123c8b4b>
+  PrefabRemaps:
+    []
+  Name: Bone.007-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.359733, y: -0.098034, z: -0.353758}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/73a5728a-c8cf-40e2-5ba1-526d124b66d8>
+  PrefabRemaps:
+    []
+  Name: Bone.001-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.355877, y: -0.098034, z: -0.356747}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/7d04ba0b-5324-4932-414e-f45df71133c8>
+  PrefabRemaps:
+    []
+  Name: squares.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e65e2521-68e4-4766-5471-cea9133bc5f9
+- !<SceneObject/7fef0863-661d-4bd7-6063-548343fd7177>
+  PrefabRemaps:
+    []
+  Name: Bone.002-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.504786, y: -0.098034, z: -0.003090}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/88961176-6057-421b-515b-3e45cfd919b5>
+  PrefabRemaps:
+    []
+  Name: Bone.003-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.358536, y: -0.098034, z: 0.354556}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/91f576ff-eff4-4c87-7f36-0c5fc037aedf>
+  PrefabRemaps:
+    []
+  Name: Bone.007-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.359733, y: -0.098034, z: -0.353758}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/9a609416-b717-4917-411c-06e81ae0f129>
+  PrefabRemaps:
+    []
+  Name: Bone-root-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.102374, y: 0.000000, z: 0.033238}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/9ff664a5-afb7-48e6-6009-335062bd9307>
+  PrefabRemaps:
+    []
+  Name: Bone.001-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.099715, y: 0.000000, z: 0.031909}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<Skin/aaa103f6-2f0e-4fa0-71e6-d6f82356e8b0>
+  PrefabRemaps:
+    []
+  Name: component_4
+  Enabled: true
+  skinBones:
+    Bone-root-chevron-lg: !<reference> c72857a3-a2cf-42cb-4e37-9a1d1aebe897
+    Bone-root-chevron-sm: !<reference> 9a609416-b717-4917-411c-06e81ae0f129
+    Bone-root-sqaure: !<reference> bb33e32c-fc8f-4410-76f4-8af5611a2138
+    Bone.001-chevron-lg: !<reference> 73a5728a-c8cf-40e2-5ba1-526d124b66d8
+    Bone.001-chevron-sm: !<reference> 9ff664a5-afb7-48e6-6009-335062bd9307
+    Bone.001-sqaure: !<reference> cb937646-c42a-4886-55b8-b871f184b53a
+    Bone.002-chevron-lg: !<reference> f422c96e-c0b3-4327-4c3b-497f8d6c7a20
+    Bone.002-chevron-sm: !<reference> 5c67bce2-2945-4eca-6cce-6bcb83da075c
+    Bone.002-sqaure: !<reference> 7fef0863-661d-4bd7-6063-548343fd7177
+    Bone.003-chevron-lg: !<reference> 88961176-6057-421b-515b-3e45cfd919b5
+    Bone.003-chevron-sm: !<reference> bac48895-c805-479d-48e3-b668f7631300
+    Bone.003-sqaure: !<reference> 3435e0ba-5eea-4295-605a-06e9b4bec6d3
+    Bone.004-chevron-lg: !<reference> b9eb9e92-5734-4641-49ad-054311d1a0ee
+    Bone.004-chevron-sm: !<reference> 0f2dc6d2-b2f9-4e9d-79a3-814f405c06a1
+    Bone.004-sqaure: !<reference> eecfb9dc-b380-4bb4-690e-f5c7d32e4bc3
+    Bone.005-chevron-lg: !<reference> dd1e6fb7-d25d-4b2b-724a-8917d5a0658d
+    Bone.005-chevron-sm: !<reference> 2158d667-0ba2-4d12-6951-5aaf8bdd3c4b
+    Bone.005-sqaure: !<reference> f96cfc91-9a38-419a-5989-ffa934350e2b
+    Bone.006-chevron-lg: !<reference> 2021780e-97ff-4607-68a9-3f8bf9b1deb1
+    Bone.006-chevron-sm: !<reference> 1d09a043-3c50-415d-4d6d-2753bd6eccda
+    Bone.006-sqaure: !<reference> 45e867a1-1b15-4480-517d-270ee72b51e2
+    Bone.007-chevron-lg: !<reference> 91f576ff-eff4-4c87-7f36-0c5fc037aedf
+    Bone.007-chevron-sm: !<reference> e8b78b9a-c0bd-4f8b-540e-1d926787f0fd
+    Bone.007-sqaure: !<reference> 734a3860-f539-490e-7dd7-f3c4123c8b4b
+    chevron big.003: !<reference> c86074cb-6312-434a-7a4d-b2f867ad53c1
+    chevron small.001: !<reference> 1decfa83-baf4-4201-57a8-0f0394419da4
+    chevron square-arm.001: !<reference> 66241846-b343-4137-7661-d64d1210a9da
+    chevron-lg-arm.003: !<reference> ae4f9e6c-9e04-4a0b-4443-6a1d102f199d
+    chevron-small.001: !<reference> 4fa58619-b666-4841-550e-cb81d6e7a21a
+    squares.001: !<reference> 7d04ba0b-5324-4932-414e-f45df71133c8
+- !<SceneObject/ae4f9e6c-9e04-4a0b-4443-6a1d102f199d>
+  PrefabRemaps:
+    []
+  Name: chevron-lg-arm.003
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000439, y: 0.098034, z: 0.000431}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.772361, y: 0.772361, z: 0.772361}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> c86074cb-6312-434a-7a4d-b2f867ad53c1
+    - !<own> c72857a3-a2cf-42cb-4e37-9a1d1aebe897
+    - !<own> 73a5728a-c8cf-40e2-5ba1-526d124b66d8
+    - !<own> f422c96e-c0b3-4327-4c3b-497f8d6c7a20
+    - !<own> 88961176-6057-421b-515b-3e45cfd919b5
+    - !<own> b9eb9e92-5734-4641-49ad-054311d1a0ee
+    - !<own> dd1e6fb7-d25d-4b2b-724a-8917d5a0658d
+    - !<own> 2021780e-97ff-4607-68a9-3f8bf9b1deb1
+    - !<own> 91f576ff-eff4-4c87-7f36-0c5fc037aedf
+  Components:
+    []
+- !<RenderMeshVisual/b03c2b08-6516-4ec4-4de7-a7896241f23a>
+  PrefabRemaps:
+    []
+  Name: Plane.006
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5e36058f-0384-4e54-bb12-3951baae23dc
+  Mesh: !<reference> c37e0c4c-fc58-4c80-bfa3-102340387a45
+  Skin: !<reference> aaa103f6-2f0e-4fa0-71e6-d6f82356e8b0
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b9eb9e92-5734-4641-49ad-054311d1a0ee>
+  PrefabRemaps:
+    []
+  Name: Bone.004-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.002433, y: -0.098034, z: 0.506187}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/bac48895-c805-479d-48e3-b668f7631300>
+  PrefabRemaps:
+    []
+  Name: Bone.003-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.245964, y: 0.000000, z: 0.381577}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/bb33e32c-fc8f-4410-76f4-8af5611a2138>
+  PrefabRemaps:
+    []
+  Name: Bone-root-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.000439, y: -0.098034, z: -0.506985}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/c72857a3-a2cf-42cb-4e37-9a1d1aebe897>
+  PrefabRemaps:
+    []
+  Name: Bone-root-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.000439, y: -0.098034, z: -0.506985}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/c86074cb-6312-434a-7a4d-b2f867ad53c1>
+  PrefabRemaps:
+    []
+  Name: chevron big.003
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> eb447809-5f8c-48ad-79f2-973f0f2d7701
+- !<ObjectPrefabAssetData/ca352fff-d893-4d93-9d57-99f1aa6d5bd2>
+  Prototype: !<ObjectOwner/0e715ba3-4df0-4fd3-8cac-c3c6aab719ce>
+    PackagePath: ""
+    objects:
+      - !<own> 6216f2ce-e717-479c-79ae-3da77e7eb86d
+- !<SceneObject/cb937646-c42a-4886-55b8-b871f184b53a>
+  PrefabRemaps:
+    []
+  Name: Bone.001-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.355877, y: -0.098034, z: -0.356747}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/dd1e6fb7-d25d-4b2b-724a-8917d5a0658d>
+  PrefabRemaps:
+    []
+  Name: Bone.005-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.354947, y: -0.098034, z: 0.357810}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<RenderMeshVisual/e65e2521-68e4-4766-5471-cea9133bc5f9>
+  PrefabRemaps:
+    []
+  Name: Plane.008
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5e36058f-0384-4e54-bb12-3951baae23dc
+  Mesh: !<reference> cef1d4dd-994f-44fb-8e76-3bccf3e5efc3
+  Skin: !<reference> aaa103f6-2f0e-4fa0-71e6-d6f82356e8b0
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/e8b78b9a-c0bd-4f8b-540e-1d926787f0fd>
+  PrefabRemaps:
+    []
+  Name: Bone.007-chevron-sm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.249953, y: 0.000000, z: 0.180817}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<RenderMeshVisual/eb447809-5f8c-48ad-79f2-973f0f2d7701>
+  PrefabRemaps:
+    []
+  Name: Plane.005
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5e36058f-0384-4e54-bb12-3951baae23dc
+  Mesh: !<reference> d72a8733-d6d9-4e05-b108-56675f887c54
+  Skin: !<reference> aaa103f6-2f0e-4fa0-71e6-d6f82356e8b0
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/eecfb9dc-b380-4bb4-690e-f5c7d32e4bc3>
+  PrefabRemaps:
+    []
+  Name: Bone.004-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.002433, y: -0.098034, z: 0.506187}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/f422c96e-c0b3-4327-4c3b-497f8d6c7a20>
+  PrefabRemaps:
+    []
+  Name: Bone.002-chevron-lg
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.504786, y: -0.098034, z: -0.003090}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/f96cfc91-9a38-419a-5989-ffa934350e2b>
+  PrefabRemaps:
+    []
+  Name: Bone.005-sqaure
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.354947, y: -0.098034, z: 0.357810}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/fef05227-6cc4-49bf-7883-85d156bc3219>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 6542152c-80f7-4bc9-6093-24bad0848e1d
+  Components:
+    []

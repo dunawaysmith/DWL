@@ -51,7 +51,7 @@
     Overrides:
       {}
 - !<ObjectPrefabAssetData/30c6608f-a3df-40bd-a62a-21a9afb96dd0>
-  Prototype: !<ObjectOwner/d84f915c-2b55-4338-b790-37f6dd927eeb>
+  Prototype: !<ObjectOwner/ea93ef55-4dd9-4df0-a3a3-39c9c5037ce1>
     PackagePath: ""
     objects:
       - !<own> 3c8b4d3d-7f15-4888-7d16-c537d028ed3d

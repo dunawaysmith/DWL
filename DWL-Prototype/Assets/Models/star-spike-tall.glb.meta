@@ -1,0 +1,299 @@
+- !<AssetImportMetadata/3c0246ac-db74-44b9-ad31-09ae143eb7f0>
+  ImportedAssetIds:
+    .hidden/glowing light: !<reference> 0c84990c-ce7f-4d77-bfb6-2e5bf86d164d
+    082df0610b518cd0: !<reference> 54c38b86-5000-44cd-bea9-def3ab8c2252
+    14e9d2d6affa13f9: !<reference> 877171ef-e32e-4670-849a-899cb058ef7c
+    2977e058ecd5b2db: !<reference> 53b6a309-c8c5-4cbb-9968-ad2cc1b6d783
+    4a3e924fad0e2f27: !<reference> 53603c09-b000-4c00-861a-a60aaf7294ee
+    4a65e822e6de44e3: !<reference> eda3f11e-5703-46fc-bb5e-f5e8914be30c
+    66780cf3a4dcb2b8: !<reference> 655f2295-b9ed-469f-bb1c-d008d30a6074
+    85d65e0334957852: !<reference> 9428a06c-04cd-458f-8f12-c02370a52d4d
+    96f664b015fcd573: !<reference> 5b999efe-7136-434a-8c57-09409a3c6a37
+    Animations/Action: !<reference> a03e13b8-41ab-4cc4-99a5-b7eb6af79e3c
+    Animations/star-stem-armAction: !<reference> 89287943-1b08-4d4c-9290-3c6c8cf1cabe
+    Materials/glowing light: !<reference> bd6aa2cf-b3f2-4410-a475-f0d8e8baf2a5
+    Materials/glowing light|glowing light|GraphPassInfo: !<reference> c19a37ee-73fe-4b08-b7c2-017e1322d422
+    Meshes/Star.041: !<reference> 05e731db-e048-4ec5-bf0a-0becf767250d
+    Scene: !<reference> 8534cf3c-d544-4c03-9c9e-14b9f5a137f2
+    ae2e9b9fe2adde22: !<reference> 566a97c6-2e65-4c2d-81ef-f42536f031e4
+    f05b8b048d37f992: !<reference> 60a2e7f1-2eca-42be-881c-a96127209fb0
+    f1ce1ca0e27d5e26: !<reference> 752959ae-a7d6-4e4c-8d9a-8523874be4ba
+    f7823ed8e3d3f631: !<reference> cadf131e-851e-41d9-8d12-bed6b9c03d52
+    f9073389b0039100: !<reference> fd9cbcf1-bee7-40c7-ac66-00aaabef285a
+    fdfb759428772ed8: !<reference> 3288d775-d401-434c-931a-73e4c66c4fe2
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> 8534cf3c-d544-4c03-9c9e-14b9f5a137f2
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> ee36862d-02b5-4fba-9442-e659c10750aa
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+    ExtensionMappings:
+      mesh: None Compression
+    Overrides:
+      {}
+- !<SceneObject/3288d775-d401-434c-6ce5-8c1b3993b01d>
+  PrefabRemaps:
+    []
+  Name: stem-arm4
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.005734, y: 0.007683, z: -1.165278}
+    Rotation: {x: -89.999985, y: -0.000000, z: 0.000096}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/53603c09-b000-4c00-79e5-59f5508d6b11>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5b999efe-7136-434a-73a8-f6bf65c395c8
+  Components:
+    []
+- !<SceneObject/53b6a309-c8c5-4cbb-6697-52d33e49287c>
+  PrefabRemaps:
+    []
+  Name: stem-arm3
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 1.171012, y: 0.007683, z: 0.000000}
+    Rotation: {x: -180.000000, y: -90.000000, z: 90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/54c38b86-5000-44cd-4156-210c5473ddad>
+  PrefabRemaps:
+    []
+  Name: stem-top
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.098886, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/566a97c6-2e65-4c2d-7e10-0bdac90fce1b>
+  PrefabRemaps:
+    []
+  Name: stem-arm1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1.090744, y: 0.007683, z: 0.000000}
+    Rotation: {x: -89.999977, y: 90.000000, z: 90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/5b999efe-7136-434a-73a8-f6bf65c395c8>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> eda3f11e-5703-46fc-44a1-0a176eb41cf3
+  Components:
+    - !<own> cadf131e-851e-41d9-72ed-4129463fc2ad
+    - !<own> 9428a06c-04cd-458f-70ed-3fdc8f5ad2b2
+- !<SceneObject/60a2e7f1-2eca-42be-77e3-569ed8df604f>
+  PrefabRemaps:
+    []
+  Name: stem-btm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -1.094527, z: 0.000000}
+    Rotation: {x: -180.000000, y: 89.980217, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/655f2295-b9ed-469f-44e3-2ff72cf59f8b>
+  PrefabRemaps:
+    []
+  Name: star-spike-tall
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 53603c09-b000-4c00-79e5-59f5508d6b11
+  Components:
+    []
+- !<SceneObject/752959ae-a7d6-4e4c-7265-7adc78b41b45>
+  PrefabRemaps:
+    []
+  Name: star-stem
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fd9cbcf1-bee7-40c7-5399-ff555410d7a5
+- !<SceneObject/877171ef-e32e-4670-7b65-76634fa71083>
+  PrefabRemaps:
+    []
+  Name: stem-arm2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.017201, y: 0.007683, z: 1.153811}
+    Rotation: {x: 90.000000, y: 0.000000, z: 179.999969}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<Skin/9428a06c-04cd-458f-70ed-3fdc8f5ad2b2>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  skinBones:
+    star-stem: !<reference> 752959ae-a7d6-4e4c-7265-7adc78b41b45
+    star-stem-arm: !<reference> eda3f11e-5703-46fc-44a1-0a176eb41cf3
+    stem-arm1: !<reference> 566a97c6-2e65-4c2d-7e10-0bdac90fce1b
+    stem-arm2: !<reference> 877171ef-e32e-4670-7b65-76634fa71083
+    stem-arm3: !<reference> 53b6a309-c8c5-4cbb-6697-52d33e49287c
+    stem-arm4: !<reference> 3288d775-d401-434c-6ce5-8c1b3993b01d
+    stem-btm: !<reference> 60a2e7f1-2eca-42be-77e3-569ed8df604f
+    stem-top: !<reference> 54c38b86-5000-44cd-4156-210c5473ddad
+- !<AnimationPlayer/cadf131e-851e-41d9-72ed-4129463fc2ad>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 89287943-1b08-4d4c-9290-3c6c8cf1cabe
+      Name: star-stem-armAction
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 126.249992
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> a03e13b8-41ab-4cc4-99a5-b7eb6af79e3c
+      Name: Action
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 124.999992
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+- !<SceneObject/eda3f11e-5703-46fc-44a1-0a176eb41cf3>
+  PrefabRemaps:
+    []
+  Name: star-stem-arm
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 752959ae-a7d6-4e4c-7265-7adc78b41b45
+    - !<own> 54c38b86-5000-44cd-4156-210c5473ddad
+    - !<own> 60a2e7f1-2eca-42be-77e3-569ed8df604f
+    - !<own> 566a97c6-2e65-4c2d-7e10-0bdac90fce1b
+    - !<own> 877171ef-e32e-4670-7b65-76634fa71083
+    - !<own> 53b6a309-c8c5-4cbb-6697-52d33e49287c
+    - !<own> 3288d775-d401-434c-6ce5-8c1b3993b01d
+  Components:
+    []
+- !<ObjectPrefabAssetData/ee36862d-02b5-4fba-9442-e659c10750aa>
+  Prototype: !<ObjectOwner/283343e5-47d4-4ee1-a6a8-999d3af35aeb>
+    PackagePath: ""
+    objects:
+      - !<own> 655f2295-b9ed-469f-44e3-2ff72cf59f8b
+- !<RenderMeshVisual/fd9cbcf1-bee7-40c7-5399-ff555410d7a5>
+  PrefabRemaps:
+    []
+  Name: Star.041
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> bd6aa2cf-b3f2-4410-a475-f0d8e8baf2a5
+  Mesh: !<reference> 05e731db-e048-4ec5-bf0a-0becf767250d
+  Skin: !<reference> 9428a06c-04cd-458f-70ed-3fdc8f5ad2b2
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

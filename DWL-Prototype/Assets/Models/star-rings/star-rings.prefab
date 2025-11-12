@@ -1,0 +1,260 @@
+- !<ObjectPrefab/974d6248-afa7-4646-b7a8-8a4a306c82fd>
+  PackagePath: ""
+  objects:
+    - !<own> abfd0ea2-9178-4780-a459-8e8bd75d607b
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/02682686-dd73-45af-ab02-78d55c977025>
+  PrefabRemaps:
+    []
+  Name: ring.1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 72.823181, y: 36.939163, z: -155.095367}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c6fd8fd1-1f3d-41ed-acb3-dd6161de8d80
+- !<AnimationPlayer/331c0262-b68f-49f6-be8a-5218e7ad559f>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    - !<AnimationClip>
+      AnimationAsset: !<reference> cd874038-3ec8-4df5-a8d6-52f1c2b8308c
+      Name: ring.3|Action.001
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 118f6529-c348-4e4e-9eb1-0b12ba51f12b
+      Name: ring.3|Action.002
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 490432a9-f4d3-4782-a394-b5546b75cdb2
+      Name: ring.3|Action.003
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 691da550-cee8-4122-8157-d9f78647f86c
+      Name: ring.2|Action.001
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> de8a18ea-2717-423e-ab11-c8609ae88bdd
+      Name: ring.2|Action.002
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> ddd0a14e-00f5-4d83-b9c3-696fb6da8b5e
+      Name: ring.2|Action.003
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 50d88490-84aa-4954-9163-d64689f1349e
+      Name: ring.1|Action.001
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> 81aad0a0-e866-4979-8cb2-1bb0c758dd29
+      Name: ring.1|Action.002
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+    - !<AnimationClip>
+      AnimationAsset: !<reference> cd15462f-fa71-4bcc-9e70-ca97053c0383
+      Name: ring.1|Action.003
+      Weight: 1.000000
+      PlaybackSpeed: 1.000000
+      Begin: 0.000000
+      End: 186.249985
+      Offset: 0.000000
+      Reversed: false
+      Disabled: false
+      BlendMode: Default
+      ScaleMode: Multiply
+      PlaybackMode: Loop
+- !<RenderMeshVisual/517458e3-91fa-471b-93a8-fe561622b099>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> b92568ae-9cfe-408e-945c-70766d6af278
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/918a4978-cf8a-4a17-bcfa-4883bd3dc800>
+  PrefabRemaps:
+    []
+  Name: ring.2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 19.404751, y: -46.561314, z: -142.368347}
+    Scale: {x: 87.400574, y: 87.400581, z: 87.400581}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c554b8d8-8f0f-4fa8-ad9e-fe7ac73c8940
+- !<SceneObject/abfd0ea2-9178-4780-a459-8e8bd75d607b>
+  PrefabRemaps:
+    - 02682686-dd73-45af-ab02-78d55c977025: 02682686-dd73-45af-54fd-872aa3688fda
+    - 331c0262-b68f-49f6-be8a-5218e7ad559f: 331c0262-b68f-49f6-4175-ade71852aa60
+    - 517458e3-91fa-471b-93a8-fe561622b099: 517458e3-91fa-471b-6c57-01a9e9dd4f66
+    - 918a4978-cf8a-4a17-bcfa-4883bd3dc800: 918a4978-cf8a-4a17-4305-b77c42c237ff
+    - abfd0ea2-9178-4780-a459-8e8bd75d607b: abfd0ea2-9178-4780-5ba6-717428a29f84
+    - c554b8d8-8f0f-4fa8-ad9e-fe7ac73c8940: c554b8d8-8f0f-4fa8-5261-018538c376bf
+    - c6fd8fd1-1f3d-41ed-acb3-dd6161de8d80: c6fd8fd1-1f3d-41ed-534c-229e9e21727f
+    - d6c15eed-4875-42f0-8f48-b62b64986a7a: d6c15eed-4875-42f0-70b7-49d49b679585
+  Name: star-rings
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> d6c15eed-4875-42f0-8f48-b62b64986a7a
+    - !<own> 918a4978-cf8a-4a17-bcfa-4883bd3dc800
+    - !<own> 02682686-dd73-45af-ab02-78d55c977025
+  Components:
+    - !<own> 331c0262-b68f-49f6-be8a-5218e7ad559f
+- !<RenderMeshVisual/c554b8d8-8f0f-4fa8-ad9e-fe7ac73c8940>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> c148370c-55e8-450d-b910-f3902a04366a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/c6fd8fd1-1f3d-41ed-acb3-dd6161de8d80>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 64e652e6-0179-4d0f-a272-39f3b1fd17f7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/d6c15eed-4875-42f0-8f48-b62b64986a7a>
+  PrefabRemaps:
+    []
+  Name: ring.3
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.050987, y: -0.055992, z: -0.030632}
+    Scale: {x: 100.000008, y: 99.999992, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 517458e3-91fa-471b-93a8-fe561622b099
