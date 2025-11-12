@@ -10,27 +10,33 @@ export class WinterStarController extends BaseScriptComponent {
   @input startButton: Interactable;
   @input startMenuHideSeconds: number = 0.5;
 
-  // Star
+  // --- Star ---
   @input winterStarContainer: SceneObject;
   @input winterStarHolder: SceneObject;
   @input fragment1: SceneObject;
   @input fragment2: SceneObject;
   @input fragment3: SceneObject;
-  @input starAnimObjects: SceneObject[] = []; // spikes-tall, spikes-small, rings, chevrons, SFanim, RLanim
+  @input starAnimObjects: SceneObject[] = []; // rings, chevrons, etc
+  @input spikesTall: SceneObject;
+  @input spikesSmall: SceneObject;
+  @input spikesScaleDown: number = 0.6;
+  @input spikesScaleDuration: number = 0.4;
   @input haloCompleteMaterial: Material;
   @input starBorder: SceneObject;
   @input starBorderMaterial: Material;
+
+  // 2D animated textures via Image components (no fading; scale instead)
+  @input snowflakeAnimObject: SceneObject;   
+  @input radiatingLineObject: SceneObject;   
+  @input anim2DScaleDuration: number = 0.4;  // seconds
+
+  // Wind
   @input windAnimation: SceneObject;
   @input windFadeInDuration: number = 1.0;
   @input windVisibleDuration: number = 5.0;
   @input windFadeOutDuration: number = 1.0;
   @input haloRotationDuration: number = 10.0;
   @input haloFadeDuration: number = 1.0;
-
-  // 2D animated materials
-  @input snowflakeAnimMaterial: Material;
-  @input radiatingLineMaterial: Material;
-  @input anim2DFadeSeconds: number = 0.5;
 
   // Tree
   @input christmasTree: SceneObject;
@@ -70,6 +76,10 @@ export class WinterStarController extends BaseScriptComponent {
   @input explosionDuration: number = 1.0;
   @input collectDuration: number = 0.8;
 
+  // Pull toward user during explosion
+  @input userCamera: SceneObject;
+  @input explodeUserPull: number = 0.15;
+
   // Unification
   @input unificationRiseDistance: number = 0.6;
   @input unificationRiseDuration: number = 3.0;
@@ -86,7 +96,6 @@ export class WinterStarController extends BaseScriptComponent {
   @input collectedSound: AudioComponent;
   @input unificationSound: AudioComponent;
 
-  // State
   private readonly States = {
     DESCENDING: "descending",
     WIND_BLOWING: "wind_blowing",
@@ -111,6 +120,14 @@ export class WinterStarController extends BaseScriptComponent {
 
   // Cached anim players
   private cachedStarPlayers: AnimationPlayer[] | null = null;
+
+  // Spike scales
+  private spikesTallOrig: vec3 | null = null;
+  private spikesSmallOrig: vec3 | null = null;
+
+  // 2D anim original scales
+  private snowflakeOrigScale: vec3 | null = null;
+  private radiatingOrigScale: vec3 | null = null;
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => this.init());
@@ -138,12 +155,22 @@ export class WinterStarController extends BaseScriptComponent {
     if (this.winterStarHolder) this.winterStarHolder.enabled = false;
     if (this.startMenu) this.startMenu.enabled = true;
 
+    // cache original scales for spikes + 2D anim objects
+    this.cacheAuxScales();
+
     this.ensureUIFadeUpdate();
+  }
+
+  private cacheAuxScales(): void {
+    if (this.spikesTall && !this.spikesTallOrig) this.spikesTallOrig = this.spikesTall.getTransform().getLocalScale();
+    if (this.spikesSmall && !this.spikesSmallOrig) this.spikesSmallOrig = this.spikesSmall.getTransform().getLocalScale();
+    if (this.snowflakeAnimObject && !this.snowflakeOrigScale) this.snowflakeOrigScale = this.snowflakeAnimObject.getTransform().getLocalScale();
+    if (this.radiatingLineObject && !this.radiatingOrigScale) this.radiatingOrigScale = this.radiatingLineObject.getTransform().getLocalScale();
   }
 
   private setupStartButton(): void {
     if (!this.startButton || !this.startMenu) {
-      print("WinterStarController: start button or menu not assigned — starting immediately.");
+      print("WinterStarController: start button/menu not assigned — starting immediately.");
       this.startStarSequence();
       return;
     }
@@ -192,50 +219,23 @@ export class WinterStarController extends BaseScriptComponent {
     });
   }
 
-  // Anim players under starAnimObjects
-  private getAllAnimationPlayersUnder(objs: SceneObject[]): AnimationPlayer[] {
-    const result: AnimationPlayer[] = [];
-    const visit = (so: SceneObject) => {
-      if (!so) return;
-      const ap = so.getComponent("Component.AnimationPlayer") as AnimationPlayer;
-      if (ap) result.push(ap);
-      const n = so.getChildrenCount();
-      for (let i = 0; i < n; i++) {
-        const c = so.getChild(i);
-        if (c) visit(c);
-      }
-    };
-    objs?.forEach(o => o && visit(o));
-    return result;
-  }
-  private ensureStarPlayersCached(): void {
-    if (!this.cachedStarPlayers) {
-      this.cachedStarPlayers = this.getAllAnimationPlayersUnder(this.starAnimObjects || []);
-      print(`WinterStarController: cached ${this.cachedStarPlayers.length} star AnimationPlayers`);
-    }
-  }
-  private pauseStarAnims(): void {
-    this.ensureStarPlayersCached();
-    this.cachedStarPlayers!.forEach(p => p.pauseAll && p.pauseAll());
-  }
-  private resumeStarAnims(): void {
-    this.ensureStarPlayersCached();
-    this.cachedStarPlayers!.forEach(p => {
-      if (p.resumeAll) p.resumeAll(); else if (p.playAll) p.playAll();
-    });
-  }
-
-  // --- Core sequences ---
+  // --- Descent (start 2D animations; no fading) ---
   private startStarDescent(): void {
     this.currentState = this.States.DESCENDING;
-    if (!this.winterStarHolder) { print("ERROR: winterStarHolder not assigned"); return; }
+    if (this.winterStarHolder) this.winterStarHolder.enabled = true;
 
-    this.winterStarHolder.enabled = true;
+    this.playAnimatedOnObject(this.snowflakeAnimObject, -1, 0);
+    this.playAnimatedOnObject(this.radiatingLineObject, -1, 0);
 
     const transform = this.winterStarHolder.getTransform();
     const startPos = transform.getLocalPosition();
     const targetPos = new vec3(startPos.x, startPos.y - this.descentDistance, startPos.z);
 
+    const startScale = new vec3(this.descentStartScale, this.descentStartScale, this.descentStartScale);
+    const endScale = new vec3(this.descentEndScale, this.descentEndScale, this.descentEndScale);
+    transform.setLocalScale(startScale);
+
+    LSTween.scaleToLocal(transform, endScale, this.descentDuration * 1000).easing(Easing.Quadratic.Out).start();
     LSTween.moveToLocal(transform, targetPos, this.descentDuration * 1000)
       .easing(Easing.Quadratic.InOut)
       .onComplete(() => {
@@ -243,24 +243,19 @@ export class WinterStarController extends BaseScriptComponent {
         this.triggerWind();
       })
       .start();
-
-    const startScale = new vec3(this.descentStartScale, this.descentStartScale, this.descentStartScale);
-    const endScale = new vec3(this.descentEndScale, this.descentEndScale, this.descentEndScale);
-    transform.setLocalScale(startScale);
-    LSTween.scaleToLocal(transform, endScale, this.descentDuration * 1000).easing(Easing.Quadratic.Out).start();
   }
 
   private storeFragmentPositions(): void {
     this.fragmentData.forEach(f => {
       const tr = f.sceneObject.getTransform();
       f.originalPosition = tr.getWorldPosition();
-      f.originalLocalPosition = tr.getLocalPosition(); // use local for return
+      f.originalLocalPosition = tr.getLocalPosition();
     });
+    this.cacheAuxScales();
   }
 
   private triggerWind(): void {
     this.currentState = this.States.WIND_BLOWING;
-
     if (this.windSound) this.windSound.play(1);
 
     if (this.windAnimation) {
@@ -298,14 +293,23 @@ export class WinterStarController extends BaseScriptComponent {
     if (this.haloCompleteMaterial) LSTween.alphaTo(this.haloCompleteMaterial, 0, this.haloFadeDuration).start();
     if (this.starBorderMaterial) LSTween.alphaTo(this.starBorderMaterial, 0.2, this.haloFadeDuration).start();
 
-    // fade/stop animated 2D materials
-    this.fadeAndStopAnimatedMaterial(this.snowflakeAnimMaterial, 0, this.anim2DFadeSeconds);
-    this.fadeAndStopAnimatedMaterial(this.radiatingLineMaterial, 0, this.anim2DFadeSeconds);
+    // Stop animated textures and scale them to 0
+    this.stopAnimatedOnObject(this.snowflakeAnimObject);
+    this.stopAnimatedOnObject(this.radiatingLineObject);
+    this.scale2DAnimObjectsDown();
 
+    // Scale spikes down
+    this.scaleSpikesDown();
+
+    // Move fragments outward + toward user
+    const camPos = this.userCamera.getTransform().getWorldPosition();
     this.fragmentData.forEach(f => {
       const tr = f.sceneObject.getTransform();
       const start = tr.getWorldPosition();
-      const target = start.add(f.direction.uniformScale(this.explosionDistance));
+      const outward = f.direction.uniformScale(this.explosionDistance);
+      const dirToUser = camPos.sub(start).normalize();
+      const towardUser = dirToUser.uniformScale(this.explodeUserPull);
+      const target = start.add(outward).add(towardUser);
       LSTween.moveToWorld(tr, target, this.explosionDuration * 1000).easing(Easing.Quadratic.Out).start();
     });
 
@@ -335,7 +339,7 @@ export class WinterStarController extends BaseScriptComponent {
       if (this.failsafeTimer) { this.removeEvent(this.failsafeTimer); this.failsafeTimer = null; }
       const evt = this.createEvent("DelayedCallbackEvent");
       evt.bind(() => this.startUnification());
-      evt.reset(this.collectDuration + 0.05); // wait for last return tween
+      evt.reset(this.collectDuration + 0.05);
     } else {
       const remaining = this.fragmentData.length - this.fragmentsCollected;
       this.showUI(`${remaining} fragment${remaining > 1 ? "s" : ""} remaining...`, "remaining", 1.2);
@@ -358,7 +362,6 @@ export class WinterStarController extends BaseScriptComponent {
     this.fragmentData.forEach(f => {
       if (f.collected) return;
       f.collected = true;
-      this.fragmentsCollected++;
       if (f.interactable) f.interactable.enabled = false;
       this.animateFragmentReturn(f);
     });
@@ -376,9 +379,13 @@ export class WinterStarController extends BaseScriptComponent {
     if (this.haloCompleteMaterial) LSTween.alphaTo(this.haloCompleteMaterial, 1, this.haloFadeDuration).start();
     if (this.starBorderMaterial) LSTween.alphaTo(this.starBorderMaterial, 1, this.haloFadeDuration).start();
 
-    // fade-in + play animated 2D materials
-    this.fadeInAndPlayAnimatedMaterial(this.snowflakeAnimMaterial, 1, this.anim2DFadeSeconds, -1);
-    this.fadeInAndPlayAnimatedMaterial(this.radiatingLineMaterial, 1, this.anim2DFadeSeconds, -1);
+    // Restart animated textures and restore their scales
+    this.playAnimatedOnObject(this.snowflakeAnimObject, -1, 0);
+    this.playAnimatedOnObject(this.radiatingLineObject, -1, 0);
+    this.restore2DAnimObjects();
+
+    // Restore spike scales
+    this.restoreSpikeScales();
 
     this.showUI("The Winter Star\nburns bright again!", "unify_bright");
 
@@ -445,7 +452,7 @@ export class WinterStarController extends BaseScriptComponent {
     this.showUI("Move your hand.\nYou are a star\nbearer now.", "final", 2.0);
   }
 
-  // UI fade
+  // --- UI fade-in/hold/fade-out ---
   private ensureUIFadeUpdate() {
     if (this.uiFadeUpdateEvt) return;
     this.uiFadeUpdateEvt = this.createEvent("UpdateEvent");
@@ -456,13 +463,18 @@ export class WinterStarController extends BaseScriptComponent {
   private showUI(message: string, tag?: string, holdSeconds?: number, showPinchHand?: boolean) {
     if (!this.instructionText) { print(message); return; }
     if (this.pinchUIHand) this.pinchUIHand.enabled = !!showPinchHand;
+
     if (this.uiComp) this.uiComp.enabled = true; else this.instructionText.getSceneObject().enabled = true;
+
     this.cancelUIAnimation();
+
     this.instructionText.text = message;
     const tf = this.instructionText.textFill;
     tf.color = new vec4(tf.color.r, tf.color.g, tf.color.b, 0);
+
     this.uiCurrentTag = tag;
     this.startUIPhase("in", this.uiFadeInSeconds);
+
     const hold = typeof holdSeconds === "number" ? holdSeconds : this.uiHoldSeconds;
     this.uiHoldDelayEvt = this.createEvent("DelayedCallbackEvent");
     this.uiHoldDelayEvt.bind(() => { this.startUIPhase("out", this.uiFadeOutSeconds); });
@@ -481,6 +493,7 @@ export class WinterStarController extends BaseScriptComponent {
     const k = Math.min(1, t / this.uiPhaseDuration);
     const tf = this.instructionText.textFill;
     const col = tf.color;
+
     if (this.uiPhase === "in") {
       tf.color = new vec4(col.r, col.g, col.b, k);
       if (k >= 1) this.startUIPhase("hold", 0.0001);
@@ -494,6 +507,7 @@ export class WinterStarController extends BaseScriptComponent {
     this.uiPhase = null;
     if (this.uiComp) this.uiComp.enabled = false;
     if (this.pinchUIHand) this.pinchUIHand.enabled = false;
+
     const tag = this.uiCurrentTag;
     this.uiCurrentTag = undefined;
     this.onUIMessageComplete(tag);
@@ -511,33 +525,120 @@ export class WinterStarController extends BaseScriptComponent {
     }
   }
 
-  // Material fades for 2D animated textures
-  private fadeAndStopAnimatedMaterial(mat: Material | null, toAlpha: number, durSec: number): void {
-    if (!mat) return;
-    LSTween.alphaTo(mat, toAlpha, durSec)
-      .onComplete(() => {
-        if (toAlpha <= 0) {
-          const ctl = this.getAnimatedTexControl(mat);
-          if (ctl && ctl.stop) ctl.stop();
-        }
-      })
-      .start();
+  // --- Animation players search/pause/resume ---
+  private getAllAnimationPlayersUnder(objs: SceneObject[]): AnimationPlayer[] {
+    const result: AnimationPlayer[] = [];
+    const visit = (so: SceneObject) => {
+      if (!so) return;
+      const ap = so.getComponent("Component.AnimationPlayer") as AnimationPlayer;
+      if (ap) result.push(ap);
+      const n = so.getChildrenCount();
+      for (let i = 0; i < n; i++) visit(so.getChild(i));
+    };
+    objs?.forEach(o => o && visit(o));
+    return result;
   }
-  private fadeInAndPlayAnimatedMaterial(mat: Material | null, toAlpha: number, durSec: number, loopCount: number = -1): void {
-    if (!mat) return;
-    const ctl = this.getAnimatedTexControl(mat);
-    if (ctl && ctl.play) ctl.play(loopCount, 0);
-    LSTween.alphaTo(mat, toAlpha, durSec).start();
+
+  private ensureStarPlayersCached(): void {
+    if (!this.cachedStarPlayers) {
+      this.cachedStarPlayers = this.getAllAnimationPlayersUnder(this.starAnimObjects || []);
+      print(`WinterStarController: cached ${this.cachedStarPlayers.length} star AnimationPlayers`);
+    }
   }
-  private getAnimatedTexControl(mat: Material): AnimatedTextureFileProvider | null {
+
+  private pauseStarAnims(): void {
+    this.ensureStarPlayersCached();
+    this.cachedStarPlayers!.forEach(p => p.pauseAll && p.pauseAll());
+  }
+
+  private resumeStarAnims(): void {
+    this.ensureStarPlayersCached();
+    this.cachedStarPlayers!.forEach(p => { if (p.resumeAll) p.resumeAll(); else if (p.playAll) p.playAll(); });
+  }
+
+  // --- Spikes scaling ---
+  private scaleSpikesDown(): void {
+    if (this.spikesTall && this.spikesTallOrig) {
+      const tr = this.spikesTall.getTransform();
+      const o = this.spikesTallOrig;
+      const t = new vec3(o.x * this.spikesScaleDown, o.y * this.spikesScaleDown, o.z * this.spikesScaleDown);
+      LSTween.scaleToLocal(tr, t, this.spikesScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+    if (this.spikesSmall && this.spikesSmallOrig) {
+      const tr = this.spikesSmall.getTransform();
+      const o = this.spikesSmallOrig;
+      const t = new vec3(o.x * this.spikesScaleDown, o.y * this.spikesScaleDown, o.z * this.spikesScaleDown);
+      LSTween.scaleToLocal(tr, t, this.spikesScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+  }
+
+  private restoreSpikeScales(): void {
+    if (this.spikesTall && this.spikesTallOrig) {
+      LSTween.scaleToLocal(this.spikesTall.getTransform(), this.spikesTallOrig, this.spikesScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+    if (this.spikesSmall && this.spikesSmallOrig) {
+      LSTween.scaleToLocal(this.spikesSmall.getTransform(), this.spikesSmallOrig, this.spikesScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+  }
+
+  // --- 2D anim helpers (via Image → AnimatedTextureFileProvider) ---
+  private getImageMainMaterial(so: SceneObject | null): Material | null {
+    if (!so) return null;
+    const img = so.getComponent("Component.Image") as Image;
+    if (!img) return null;
+    if ((img as any).getMaterial) {
+      const m = (img as any).getMaterial(0);
+      if (m) return m as Material;
+    }
+    return img.mainMaterial || null;
+  }
+
+  private getAnimatedProviderFromImage(so: SceneObject | null): AnimatedTextureFileProvider | null {
+    const mat = this.getImageMainMaterial(so);
+    if (!mat) return null;
     try {
-      const baseTex = mat.mainPass && mat.mainPass.baseTex;
-      const ctl = baseTex ? (baseTex.control as AnimatedTextureFileProvider) : null;
-      return ctl || null;
+      const pass = (mat as any).getPass ? (mat as any).getPass(0) : (mat as any).mainPass;
+      const baseTex = pass && pass.baseTex;
+      return baseTex ? (baseTex.control as AnimatedTextureFileProvider) : null;
     } catch (_) { return null; }
   }
 
-  // Material fading helpers
+  private playAnimatedOnObject(so: SceneObject | null, loops: number = -1, offset: number = 0) {
+    const ctl = this.getAnimatedProviderFromImage(so);
+    if (ctl && ctl.play) ctl.play(loops, offset);
+  }
+
+  private stopAnimatedOnObject(so: SceneObject | null) {
+    const ctl = this.getAnimatedProviderFromImage(so);
+    if (ctl && ctl.stop) ctl.stop();
+  }
+
+  private scale2DAnimObjectsDown(): void {
+    const zero = new vec3(0, 0, 0);
+    if (this.snowflakeAnimObject) {
+      const tr = this.snowflakeAnimObject.getTransform();
+      LSTween.scaleToLocal(tr, zero, this.anim2DScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+    if (this.radiatingLineObject) {
+      const tr = this.radiatingLineObject.getTransform();
+      LSTween.scaleToLocal(tr, zero, this.anim2DScaleDuration * 1000).easing(Easing.Quadratic.InOut).start();
+    }
+  }
+
+  private restore2DAnimObjects(): void {
+    if (this.snowflakeAnimObject && this.snowflakeOrigScale) {
+      LSTween.scaleToLocal(this.snowflakeAnimObject.getTransform(), this.snowflakeOrigScale, this.anim2DScaleDuration * 1000)
+        .easing(Easing.Quadratic.InOut)
+        .start();
+    }
+    if (this.radiatingLineObject && this.radiatingOrigScale) {
+      LSTween.scaleToLocal(this.radiatingLineObject.getTransform(), this.radiatingOrigScale, this.anim2DScaleDuration * 1000)
+        .easing(Easing.Quadratic.InOut)
+        .start();
+    }
+  }
+
+  // --- Generic material fade (still used for wind, etc.) ---
   private fadeSceneObject(obj: SceneObject, fromA: number, toA: number, dur: number, onDone?: () => void): void {
     if (!obj) { onDone && onDone(); return; }
     const mat = this.getObjectMaterial(obj);
@@ -546,6 +647,7 @@ export class WinterStarController extends BaseScriptComponent {
     mat.mainPass.baseColor = new vec4(c.r, c.g, c.b, fromA);
     LSTween.alphaTo(mat, toA, dur).onComplete(() => onDone && onDone()).start();
   }
+
   private getObjectMaterial(so: SceneObject): Material | null {
     const rm = so.getComponent("Component.RenderMeshVisual") as RenderMeshVisual;
     if (rm && rm.mainMaterial) return rm.mainMaterial;
@@ -555,13 +657,12 @@ export class WinterStarController extends BaseScriptComponent {
   }
 }
 
-// Types
 interface FragmentData {
   sceneObject: SceneObject;
   name: string;
   direction: vec3;
   collected: boolean;
-  originalPosition: vec3;         // kept for reference
-  originalLocalPosition: vec3;    // used for return
+  originalPosition: vec3;
+  originalLocalPosition: vec3;
   interactable: Interactable | null;
 }

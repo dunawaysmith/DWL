@@ -26,7 +26,7 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    anim2DFadeSeconds: false
+    anim2DScaleDuration: false
     christmasTree: false
     collectDuration: false
     collectedSound: false
@@ -34,6 +34,7 @@
     descentDuration: false
     descentEndScale: false
     descentStartScale: false
+    explodeUserPull: false
     explosionDistance: false
     explosionDuration: false
     explosionSound: false
@@ -56,10 +57,14 @@
     ornamentStartDelay: false
     ornaments: false
     pinchUIHand: false
-    radiatingLineMaterial: false
+    radiatingLineObject: false
     snowParticles: false
-    snowflakeAnimMaterial: false
+    snowflakeAnimObject: false
     soundtrackAudio: false
+    spikesScaleDown: false
+    spikesScaleDuration: false
+    spikesSmall: false
+    spikesTall: false
     starAnimObjects: false
     starBorder: false
     starBorderMaterial: false
@@ -76,6 +81,7 @@
     unificationRiseDistance: false
     unificationRiseDuration: false
     unificationSound: false
+    userCamera: false
     windAnimation: false
     windFadeInDuration: false
     windFadeOutDuration: false
@@ -102,18 +108,22 @@
       fragment3: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       starAnimObjects: !<reference.SceneObject[]>
         []
+      spikesTall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      spikesSmall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      spikesScaleDown: 0.600000
+      spikesScaleDuration: 0.400000
       haloCompleteMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       starBorder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       starBorderMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      snowflakeAnimObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      radiatingLineObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      anim2DScaleDuration: 0.400000
       windAnimation: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       windFadeInDuration: !<float> 1.000000
       windVisibleDuration: !<float> 5.000000
       windFadeOutDuration: !<float> 1.000000
       haloRotationDuration: !<float> 10.000000
       haloFadeDuration: !<float> 1.000000
-      snowflakeAnimMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      radiatingLineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      anim2DFadeSeconds: 0.500000
       christmasTree: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       starParticlesLeft: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       starParticlesRight: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -142,6 +152,8 @@
       explosionDistance: 0.500000
       explosionDuration: !<float> 1.000000
       collectDuration: 0.800000
+      userCamera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      explodeUserPull: 0.150000
       unificationRiseDistance: 0.600000
       unificationRiseDuration: !<float> 3.000000
       treeAnimationDuration: !<float> 3.000000
@@ -165,18 +177,22 @@
     - // @input SceneObject fragment2
     - // @input SceneObject fragment3
     - "// @input SceneObject[] starAnimObjects = {}"
+    - // @input SceneObject spikesTall
+    - // @input SceneObject spikesSmall
+    - // @input float spikesScaleDown = 0.6
+    - // @input float spikesScaleDuration = 0.4
     - // @input Asset.Material haloCompleteMaterial
     - // @input SceneObject starBorder
     - // @input Asset.Material starBorderMaterial
+    - // @input SceneObject snowflakeAnimObject
+    - // @input SceneObject radiatingLineObject
+    - // @input float anim2DScaleDuration = 0.4
     - // @input SceneObject windAnimation
     - // @input float windFadeInDuration = 1
     - // @input float windVisibleDuration = 5
     - // @input float windFadeOutDuration = 1
     - // @input float haloRotationDuration = 10
     - // @input float haloFadeDuration = 1
-    - // @input Asset.Material snowflakeAnimMaterial
-    - // @input Asset.Material radiatingLineMaterial
-    - // @input float anim2DFadeSeconds = 0.5
     - // @input SceneObject christmasTree
     - // @input SceneObject starParticlesLeft
     - // @input SceneObject starParticlesRight
@@ -203,6 +219,8 @@
     - // @input float explosionDistance = 0.5
     - // @input float explosionDuration = 1
     - // @input float collectDuration = 0.8
+    - // @input SceneObject userCamera
+    - // @input float explodeUserPull = 0.15
     - // @input float unificationRiseDistance = 0.6
     - // @input float unificationRiseDuration = 3
     - // @input float treeAnimationDuration = 3
