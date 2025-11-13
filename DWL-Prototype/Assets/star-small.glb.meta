@@ -1,0 +1,125 @@
+- !<AssetImportMetadata/9a324acb-6dba-4b30-9995-464f6685280d>
+  ImportedAssetIds:
+    4a3e924fad0e2f27: !<reference> 7a1ae387-af36-488f-9c85-e71f9518de5b
+    66780cf3a4dcb2b8: !<reference> b19dc2e5-47bc-4120-8a19-fbb937a41736
+    96f664b015fcd573: !<reference> 3bd62809-1a70-4eb2-9cf0-45de37f0af80
+    Meshes/Star.006: !<reference> 78a904dd-435e-4cb1-8579-75223f0b709b
+    Scene: !<reference> eba4c943-499a-4faf-847a-2854180e5c62
+    c72e55417630b5eb: !<reference> 55e7a9fa-5ddc-4e36-b75a-455c86ab24c1
+    e651b73a6039f664: !<reference> 0ed483df-705a-480d-9596-4ca620720e08
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> eba4c943-499a-4faf-847a-2854180e5c62
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> fbe60333-e7d0-47ed-8982-1a563287b5d2
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+    ExtensionMappings:
+      mesh: None Compression
+    Overrides:
+      {}
+- !<SceneObject/0ed483df-705a-480d-6a69-b359df8df1f7>
+  PrefabRemaps:
+    []
+  Name: Star.027
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000011, z: 180.000000}
+    Scale: {x: 0.053126, y: 0.147517, z: 0.053126}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 55e7a9fa-5ddc-4e36-48a5-baa37954db3e
+- !<SceneObject/3bd62809-1a70-4eb2-630f-ba21c80f507f>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0ed483df-705a-480d-6a69-b359df8df1f7
+  Components:
+    []
+- !<RenderMeshVisual/55e7a9fa-5ddc-4e36-48a5-baa37954db3e>
+  PrefabRemaps:
+    []
+  Name: Star.006
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 78a904dd-435e-4cb1-8579-75223f0b709b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/7a1ae387-af36-488f-637a-18e06ae721a4>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3bd62809-1a70-4eb2-630f-ba21c80f507f
+  Components:
+    []
+- !<SceneObject/b19dc2e5-47bc-4120-75e6-0446c85be8c9>
+  PrefabRemaps:
+    []
+  Name: star-small
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7a1ae387-af36-488f-637a-18e06ae721a4
+  Components:
+    []
+- !<ObjectPrefabAssetData/fbe60333-e7d0-47ed-8982-1a563287b5d2>
+  Prototype: !<ObjectOwner/1350a6b8-2cbe-475f-af56-10d1fdf4bbd1>
+    PackagePath: ""
+    objects:
+      - !<own> b19dc2e5-47bc-4120-75e6-0446c85be8c9
