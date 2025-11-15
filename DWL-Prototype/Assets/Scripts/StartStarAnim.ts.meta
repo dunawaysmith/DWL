@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/a9e5709b-af8b-4bae-a9af-03eb7b0f0b6c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d784abb4-6c25-49dd-a572-fc59e92c5d1f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d784abb4-6c25-49dd-a572-fc59e92c5d1f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4367f0f4-e437-4bc9-94c2-01e9b167f7d8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4367f0f4-e437-4bc9-94c2-01e9b167f7d8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b870508c-959a-47fa-92e7-483a6ac2f96a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoStart: false
+    bounceDistance: false
+    bounceDuration: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - bounceDistance: 0.020000
+      bounceDuration: !<float> 1.000000
+      autoStart: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float bounceDistance = 0.02
+    - // @input float bounceDuration = 1
+    - // @input bool autoStart = true

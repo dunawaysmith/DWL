@@ -8,6 +8,10 @@ export class WinterStarController extends BaseScriptComponent {
   // --- Start Menu ---
   @input startMenu: SceneObject;
   @input startButton: Interactable;
+  @input startBkMaterial: Material;
+  @input startTitleMaterial: Material;  
+  @input startStarMaterial: Material;   
+  @input startHandsMaterial: Material;    
   @input startMenuHideSeconds: number = 0.5;
 
   // --- Star ---
@@ -57,6 +61,7 @@ export class WinterStarController extends BaseScriptComponent {
   // UI
   @input instructionText: Text;
   @input uiComp: SceneObject;
+  @input uiBkMaterial: Material;
   @input pinchUIHand: SceneObject;
   @input uiFadeInSeconds: number = 0.35;
   @input uiHoldSeconds: number = 2.0;
@@ -138,6 +143,10 @@ export class WinterStarController extends BaseScriptComponent {
 
     if (this.soundtrackAudio) this.soundtrackAudio.play(-1);
     if (this.uiComp) this.uiComp.enabled = false;
+    if (this.uiBkMaterial) {
+      const c = this.uiBkMaterial.mainPass.baseColor;
+      this.uiBkMaterial.mainPass.baseColor = new vec4(c.r, c.g, c.b, 0);
+    }
     if (this.pinchUIHand) this.pinchUIHand.enabled = false;
     if (this.windAnimation) this.windAnimation.enabled = false;
     if (this.starParticlesLeft) this.starParticlesLeft.enabled = false;
@@ -163,30 +172,42 @@ export class WinterStarController extends BaseScriptComponent {
     if (this.snowflakeAnimObject && !this.snowflakeOrigScale) this.snowflakeOrigScale = this.snowflakeAnimObject.getTransform().getLocalScale();
   }
 
-  private setupStartButton(): void {
-    if (!this.startButton || !this.startMenu) {
-      print("WinterStarController: start button/menu not assigned — starting immediately.");
+
+private setupStartButton(): void {
+  if (!this.startButton || !this.startMenu) {
+    print("WinterStarController: start button/menu not assigned — starting immediately.");
+    this.startStarSequence();
+    return;
+  }
+  this.startMenu.enabled = true;
+  this.startButton.enabled = true;
+  this.startButton.onTriggerEnd.add(() => this.onStartPressed());
+}
+
+private onStartPressed(): void {
+  if (!this.startMenu) { this.startStarSequence(); return; }
+  if (this.startButton) this.startButton.enabled = false;
+
+  const tr = this.startMenu.getTransform();
+  LSTween.scaleToLocal(tr, vec3.zero(), this.startMenuHideSeconds * 1000)
+    .easing(Easing.Quadratic.In)
+    .onComplete(() => {
+      this.startMenu.enabled = false;
       this.startStarSequence();
-      return;
-    }
-    this.startMenu.enabled = true;
-    this.startButton.enabled = true;
-    this.startButton.onTriggerEnd.add(() => this.onStartPressed());
-  }
+    })
+    .start();
+  
+  // Fade out all start screen materials
+  const fadeOut = (mat: Material | null) => {
+    if (mat) LSTween.alphaTo(mat, 0, 1000).easing(Easing.Quadratic.In).start();
+  };
+  
+  fadeOut(this.startBkMaterial);
+  fadeOut(this.startTitleMaterial);
+  fadeOut(this.startStarMaterial);
+  fadeOut(this.startHandsMaterial);
+}
 
-  private onStartPressed(): void {
-    if (!this.startMenu) { this.startStarSequence(); return; }
-    if (this.startButton) this.startButton.enabled = false;
-
-    const tr = this.startMenu.getTransform();
-    LSTween.scaleToLocal(tr, vec3.zero(), this.startMenuHideSeconds * 1000)
-      .easing(Easing.Quadratic.In)
-      .onComplete(() => {
-        this.startMenu.enabled = false;
-        this.startStarSequence();
-      })
-      .start();
-  }
 
   private startStarSequence(): void {
     if (this.winterStarContainer) this.winterStarContainer.enabled = true;
@@ -266,7 +287,7 @@ export class WinterStarController extends BaseScriptComponent {
 
     const delay = this.createEvent("DelayedCallbackEvent");
     delay.bind(() => {
-      this.showUI("The Winter Star\nhas been shattered!", "shattered");
+      this.showUI("Oh no—our WINTER STAR has\nSHATTERED & lost its light!", "shattered");
       this.explodeFragments();
     });
     
@@ -308,7 +329,7 @@ export class WinterStarController extends BaseScriptComponent {
 
   private startCollecting(): void {
     this.currentState = this.States.COLLECTING;
-    this.showUI("Bring it back to life by\ncollecting the fragments", "collect_intro");
+    this.showUI("COLLECT the fragments to\nbring to back to life!", "collect_intro");
     this.startFailsafeTimer();
   }
 
@@ -330,7 +351,7 @@ export class WinterStarController extends BaseScriptComponent {
       evt.reset(this.collectDuration + 0.05);
     } else {
       const remaining = this.fragmentData.length - this.fragmentsCollected;
-      this.showUI(`${remaining} fragment${remaining > 1 ? "s" : ""} remaining...`, "remaining", 1.2);
+      this.showUI(`${remaining} fragment${remaining > 1 ? "s" : ""} remaining ...`, "remaining", 1.2);
     }
   }
 
@@ -372,7 +393,7 @@ export class WinterStarController extends BaseScriptComponent {
     this.restore2DAnimObjects();
     this.restoreSpikeScales();
 
-    this.showUI("The Winter Star\nburns bright again!", "unify_bright");
+    this.showUI("The Winter Star\nBURNS BRIGHT AGAIN!", "unify_bright");
 
     const t = this.winterStarHolder.getTransform();
     const p0 = t.getLocalPosition();
@@ -433,12 +454,12 @@ export class WinterStarController extends BaseScriptComponent {
     });
   }
 
-  private completeExperience(): void {
-    this.currentState = this.States.COMPLETE;
-    if (this.starParticlesLeft) this.starParticlesLeft.enabled = true;
-    if (this.starParticlesRight) this.starParticlesRight.enabled = true;
-    this.showUI("Move your hand.\nYou are a star\nbearer now.", "final", 2.0);
-  }
+private completeExperience(): void {
+  this.currentState = this.States.COMPLETE;
+  if (this.starParticlesLeft) this.starParticlesLeft.enabled = true;
+  if (this.starParticlesRight) this.starParticlesRight.enabled = true;
+  this.showUI("You are a STAR BEARER.\nMOVE your hands.", "final", 2.0);
+}
 
   // --- UI fade-in/hold/fade-out ---
   private ensureUIFadeUpdate() {
@@ -448,26 +469,37 @@ export class WinterStarController extends BaseScriptComponent {
     this.uiFadeUpdateEvt.bind(() => this.onUIFadeUpdate());
   }
 
-  private showUI(message: string, tag?: string, holdSeconds?: number, showPinchHand?: boolean) {
-    if (!this.instructionText) { print(message); return; }
-    if (this.pinchUIHand) this.pinchUIHand.enabled = !!showPinchHand;
+private showUI(message: string, tag?: string, holdSeconds?: number, showPinchHand?: boolean) {
+  if (!this.instructionText) { print(message); return; }
+  if (this.pinchUIHand) this.pinchUIHand.enabled = !!showPinchHand;
 
-    if (this.uiComp) this.uiComp.enabled = true; else this.instructionText.getSceneObject().enabled = true;
-
-    this.cancelUIAnimation();
-
-    this.instructionText.text = message;
-    const tf = this.instructionText.textFill;
-    tf.color = new vec4(tf.color.r, tf.color.g, tf.color.b, 0);
-
-    this.uiCurrentTag = tag;
-    this.startUIPhase("in", this.uiFadeInSeconds);
-
-    const hold = typeof holdSeconds === "number" ? holdSeconds : this.uiHoldSeconds;
-    this.uiHoldDelayEvt = this.createEvent("DelayedCallbackEvent");
-    this.uiHoldDelayEvt.bind(() => { this.startUIPhase("out", this.uiFadeOutSeconds); });
-    this.uiHoldDelayEvt.reset(this.uiFadeInSeconds + hold);
+  if (this.uiComp) this.uiComp.enabled = true; else this.instructionText.getSceneObject().enabled = true;
+  
+  // Fade in UI background material
+  if (this.uiBkMaterial) {
+    LSTween.alphaTo(this.uiBkMaterial, 1, this.uiFadeInSeconds).start();
   }
+
+  this.cancelUIAnimation();
+
+  this.instructionText.text = message;
+  const tf = this.instructionText.textFill;
+  tf.color = new vec4(tf.color.r, tf.color.g, tf.color.b, 0);
+
+  this.uiCurrentTag = tag;
+  this.startUIPhase("in", this.uiFadeInSeconds);
+
+  const hold = typeof holdSeconds === "number" ? holdSeconds : this.uiHoldSeconds;
+  this.uiHoldDelayEvt = this.createEvent("DelayedCallbackEvent");
+  this.uiHoldDelayEvt.bind(() => { 
+    this.startUIPhase("out", this.uiFadeOutSeconds);
+    // Fade out UI background material
+    if (this.uiBkMaterial) {
+      LSTween.alphaTo(this.uiBkMaterial, 0, this.uiFadeOutSeconds).start();
+    }
+  });
+  this.uiHoldDelayEvt.reset(this.uiFadeInSeconds + hold);
+}
 
   private startUIPhase(phase: "in" | "hold" | "out", duration: number) {
     this.uiPhase = phase;
@@ -491,15 +523,15 @@ export class WinterStarController extends BaseScriptComponent {
     }
   }
 
-  private onUIFadeComplete() {
-    this.uiPhase = null;
-    if (this.uiComp) this.uiComp.enabled = false;
-    if (this.pinchUIHand) this.pinchUIHand.enabled = false;
+private onUIFadeComplete() {
+  this.uiPhase = null;
+  if (this.uiComp) this.uiComp.enabled = false;
+  if (this.pinchUIHand) this.pinchUIHand.enabled = false;
 
-    const tag = this.uiCurrentTag;
-    this.uiCurrentTag = undefined;
-    this.onUIMessageComplete(tag);
-  }
+  const tag = this.uiCurrentTag;
+  this.uiCurrentTag = undefined;
+  this.onUIMessageComplete(tag);
+}
 
   private cancelUIAnimation() {
     if (this.uiHoldDelayEvt) { this.removeEvent(this.uiHoldDelayEvt); this.uiHoldDelayEvt = null; }
@@ -507,11 +539,14 @@ export class WinterStarController extends BaseScriptComponent {
     this.uiCurrentTag = undefined;
   }
 
-  private onUIMessageComplete(tag?: string) {
-    if (tag === "collect_intro") {
-      this.showUI("Pinch to select\nthe star fragments.", "pinch", 1.6, true);
-    }
+private onUIMessageComplete(tag?: string) {
+  if (tag === "collect_intro") {
+    this.showUI("PINCH & POINT to\n COLLECT the fragments.", "pinch", 2.0, true);
   }
+  if (tag === "final") {
+    this.showUI("PINCH & DRAG to\nmove the ornaments.", "ornaments", 2.0);
+  }
+}
 
   // --- Animation players search/pause/resume (currently not used, but kept) ---
   private getAllAnimationPlayersUnder(objs: SceneObject[]): AnimationPlayer[] {

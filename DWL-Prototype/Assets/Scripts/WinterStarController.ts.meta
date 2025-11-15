@@ -69,10 +69,15 @@
     starBorderMaterial: false
     starParticlesLeft: false
     starParticlesRight: false
+    startBkMaterial: false
     startButton: false
+    startHandsMaterial: false
     startMenu: false
     startMenuHideSeconds: false
+    startStarMaterial: false
+    startTitleMaterial: false
     treeAnimationDuration: false
+    uiBkMaterial: false
     uiComp: false
     uiFadeInSeconds: false
     uiFadeOutSeconds: false
@@ -97,6 +102,10 @@
   DefaultScriptInputs:
     - startMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      startBkMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      startTitleMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      startStarMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      startHandsMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       startMenuHideSeconds: 0.500000
       winterStarContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       winterStarHolder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -135,6 +144,7 @@
       landscapeStartDelay: !<float> 0.000000
       instructionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       uiComp: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      uiBkMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       pinchUIHand: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       uiFadeInSeconds: 0.350000
       uiHoldSeconds: !<float> 2.000000
@@ -164,6 +174,10 @@
   InputLines:
     - // @input SceneObject startMenu
     - // @input AssignableType startButton
+    - // @input Asset.Material startBkMaterial
+    - // @input Asset.Material startTitleMaterial
+    - // @input Asset.Material startStarMaterial
+    - // @input Asset.Material startHandsMaterial
     - // @input float startMenuHideSeconds = 0.5
     - // @input SceneObject winterStarContainer
     - // @input SceneObject winterStarHolder
@@ -199,6 +213,7 @@
     - // @input float landscapeStartDelay
     - // @input Component.Text instructionText
     - // @input SceneObject uiComp
+    - // @input Asset.Material uiBkMaterial
     - // @input SceneObject pinchUIHand
     - // @input float uiFadeInSeconds = 0.35
     - // @input float uiHoldSeconds = 2

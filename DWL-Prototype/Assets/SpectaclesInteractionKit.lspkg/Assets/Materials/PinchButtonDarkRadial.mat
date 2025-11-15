@@ -59,10 +59,10 @@
       value: 78
     Tweak_N81:
       typeIdx: 5
-      value: {x: 0.078431, y: 0.078431, z: 0.078431, w: 1.000000}
+      value: {x: 0.041688, y: 0.041688, z: 0.041688, w: 1.000000}
     baseColor:
       typeIdx: 5
-      value: {x: 0.274510, y: 0.274510, z: 0.274510, w: 1.000000}
+      value: {x: 0.183948, y: 0.173648, z: 0.379446, w: 1.000000}
     colorMultiplier:
       typeIdx: 1
       value: 1.000000
